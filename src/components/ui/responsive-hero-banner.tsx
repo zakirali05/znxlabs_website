@@ -310,13 +310,13 @@ export function ResponsiveHeroBanner({
               <div className="mt-10 sm:mt-12 flex flex-wrap items-center justify-center gap-5 sm:gap-8 text-xs text-[#B8ADB2] animate-fade-slide-in-4">
                 {trustPoints.map((point, index) => (
                   <React.Fragment key={index}>
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-2 italic">
                       <CheckCircle2 className="w-4 h-4 text-[#d6acc1] shrink-0" />
                       <span>{point}</span>
                     </div>
                     {index < trustPoints.length - 1 && (
-                      <span className="hidden sm:inline text-neutral-700" aria-hidden="true">
-                        •
+                      <span className="hidden sm:inline text-neutral-700 " aria-hidden="true">
+                        
                       </span>
                     )}
                   </React.Fragment>

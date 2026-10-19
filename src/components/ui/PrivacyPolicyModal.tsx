@@ -30,7 +30,7 @@ export function PrivacyPolicyModal({ isOpen, onClose }: PrivacyPolicyModalProps)
           <button
             type="button"
             onClick={onClose}
-            className="p-1.5 rounded-lg text-neutral-400 hover:text-white hover:bg-white/5 focus:outline-none focus:ring-1 focus:ring-[#7e0e3c]"
+            className="no-shine p-1.5 rounded-lg text-neutral-400 hover:text-white hover:bg-white/5 focus:outline-none focus:ring-1 focus:ring-[#7e0e3c]"
             aria-label="Close privacy policy"
           >
             <X className="w-5 h-5" />

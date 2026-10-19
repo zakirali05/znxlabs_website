@@ -142,10 +142,10 @@ export function Navbar() {
         {/* Brand Logo */}
         <Link
           href="/"
-          className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-[#71334B] rounded-lg"
+          className="flex items-center gap-3 group focus:outline-none focus:ring-0 focus:ring-[#71334B] rounded-lg border-0"
           aria-label="ZNX Labs Homepage"
         >
-          <Logo className="h-7 sm:h-8 w-auto text-[#F6F0EB] transition-opacity group-hover:opacity-90" />
+          <Logo className="h-7 sm:h-8 md:h-10 w-auto text-[#F6F0EB] transition-opacity group-hover:opacity-90" />
         </Link>
 
         {/* Desktop Navigation with Dropdowns */}

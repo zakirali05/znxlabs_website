@@ -6,12 +6,36 @@ import { MotionReveal } from "@/components/ui/MotionReveal";
 
 export function ClientLogos() {
   const logos = [
-    { name: "APEX INDUSTRIAL", type: "Manufacturing" },
-    { name: "HORIZON FREIGHT", type: "Logistics" },
-    { name: "CRESTLINE HEALTH", type: "Healthcare" },
-    { name: "STERLING ADVISORY", type: "Professional Services" },
-    { name: "NEXAFLOW SYSTEMS", type: "Enterprise SaaS" },
-    { name: "VANGUARD PROPERTY", type: "Real Estate" },
+    {
+      name: "Qura Naturals",
+      src: "/clients/client_1_trans.png",
+      type: "Natural Wellness",
+    },
+    {
+      name: "ZedTech",
+      src: "/clients/client_2_trans.png",
+      type: "Water Solutions",
+    },
+    {
+      name: "ZedSystems",
+      src: "/clients/client_3_trans.png",
+      type: "Enterprise Cloud",
+    },
+    {
+      name: "SmartByte Labs",
+      src: "/clients/client_4_trans.png",
+      type: "Software & AI",
+    },
+    {
+      name: "Naqsh Design",
+      src: "/clients/client_5_trans.png",
+      type: "Architecture & Interior",
+    },
+    {
+      name: "Lucrative",
+      src: "/clients/client_6_trans.png",
+      type: "Interior & Lifestyle",
+    },
   ];
 
   return (
@@ -26,45 +50,44 @@ export function ClientLogos() {
                 ))}
               </div>
               <span className="text-xs font-semibold text-[#F6F0EB]">
-                5.0 Rating from Business Leaders
+                Loved by our clients
               </span>
             </div>
 
             <p className="text-xs font-mono text-[#B8ADB2] text-center md:text-right uppercase tracking-wider">
-              Trusted by growing businesses across the US, UK, and Europe
+              Trusted by our growing business partners
             </p>
           </div>
 
-          {/* Logo Strip Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 items-center">
+          {/* Logo Strip Grid - 2 Rows of 3 for Prominent Logo Presence */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6 items-center max-w-5xl mx-auto">
             {logos.map((logo) => (
               <div
                 key={logo.name}
-                className="p-4 rounded-xl bg-[rgba(246,240,235,0.02)] border border-[rgba(246,240,235,0.04)] hover:border-[rgba(246,240,235,0.12)] transition-all flex flex-col items-center justify-center text-center group cursor-default"
+                className="h-28 sm:h-32 px-6 py-4 rounded-2xl bg-[rgba(246,240,235,0.02)] border border-[rgba(246,240,235,0.06)] hover:border-[#71334B]/80 hover:bg-[#151013] hover:shadow-xl hover:shadow-[#492332]/25 transition-all duration-300 flex items-center justify-center text-center group cursor-pointer relative"
               >
-                <span className="text-sm font-bold tracking-widest text-[#B8ADB2] group-hover:text-[#F6F0EB] transition-colors font-mono">
-                  {logo.name}
-                </span>
-                <span className="text-[10px] text-neutral-400 mt-0.5">
-                  {logo.type}
-                </span>
+                <img
+                  src={logo.src}
+                  alt={logo.name}
+                  className="max-h-16 sm:max-h-20 w-auto max-w-[82%] object-contain transition-transform duration-300 group-hover:scale-108"
+                />
               </div>
             ))}
           </div>
 
-          {/* Bottom quick reassurance */}
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs text-[#B8ADB2]">
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-3.5 h-3.5 text-[#71334B]" />
-              <span>Full Intellectual Property Ownership</span>
+          {/* Bottom friendly partnership invitation */}
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs text-[#B8ADB2]">
+            <div className="flex items-center gap-2 italic">
+              <CheckCircle2 className="w-4 h-4 text-[#d6acc1] shrink-0" />
+              <span className="text-[#F6F0EB]/95 font-medium">Let&apos;s grow your business too</span>
             </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-3.5 h-3.5 text-[#71334B]" />
-              <span>Guaranteed Delivery Deadlines</span>
+            <div className="flex items-center gap-2 italic">
+              <CheckCircle2 className="w-4 h-4 text-[#d6acc1] shrink-0" />
+              <span className="text-[#F6F0EB]/95 font-medium">Become our long-term partner</span>
             </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-3.5 h-3.5 text-[#71334B]" />
-              <span>Strict Commercial Confidentiality</span>
+            <div className="flex items-center gap-2 italic">
+              <CheckCircle2 className="w-4 h-4 text-[#d6acc1] shrink-0" />
+              <span className="text-[#F6F0EB]/95 font-medium">Join us on the journey to scale</span>
             </div>
           </div>
         </MotionReveal>

@@ -36,7 +36,13 @@ export function TimedLeadModal() {
       }
     }, TWO_MINUTES_MS);
 
-    return () => clearTimeout(timer);
+    const handleOpenModal = () => setIsOpen(true);
+    window.addEventListener("open-timed-lead-modal", handleOpenModal);
+
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("open-timed-lead-modal", handleOpenModal);
+    };
   }, []);
 
   const handleClose = () => {
@@ -130,7 +136,8 @@ export function TimedLeadModal() {
             <button
               type="button"
               onClick={handleClose}
-              className="absolute top-5 right-5 p-2 rounded-xl text-[#B8ADB2] hover:text-[#F6F0EB] hover:bg-white/5 transition-colors cursor-pointer"
+              className="no-shine absolute top-5 right-5 z-20 p-2.5 rounded-full text-[#B8ADB2] hover:text-[#F6F0EB] hover:bg-white/10 transition-colors cursor-pointer"
+              style={{ position: "absolute", top: "1.25rem", right: "1.25rem" }}
               aria-label="Close dialog"
             >
               <X className="w-5 h-5" />
@@ -168,7 +175,7 @@ export function TimedLeadModal() {
             ) : (
               /* Form State */
               <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="space-y-2 pr-6">
+                <div className="space-y-2 pr-10">
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[rgba(246,240,235,0.1)] bg-[rgba(246,240,235,0.02)]">
                     <Clock className="w-3.5 h-3.5 text-[#71334B]" />
                     <span className="text-[10px] font-mono uppercase tracking-widest text-[#d6acc1] font-semibold">
