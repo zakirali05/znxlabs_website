@@ -1,0 +1,23 @@
+[
+  {
+    "referenceId": "ZNX-MVCA8SVP-Q7VJ",
+    "timestamp": "2026-10-17T10:57:43.477Z",
+    "fullName": "Robert Miller",
+    "email": "r.miller@vanguardlogistics.com",
+    "company": "Vanguard Logistics",
+    "projectType": "Business automation",
+    "budget": "$2,000–$10,000",
+    "description": "We spend 15 hours each week re-typing customer order PDFs into our accounting tool and need an automated workflow."
+  },
+  {
+    "referenceId": "ZNX-MVDUIRRZ-2N5U",
+    "timestamp": "2026-10-18T13:13:07.103Z",
+    "fullName": "Test Lead",
+    "email": "lead@example.com",
+    "phone": "+15551234567",
+    "company": "Direct Website Inquiry",
+    "projectType": "General Enquiry",
+    "budget": "Not specified",
+    "description": "Test enquiry"
+  }
+]

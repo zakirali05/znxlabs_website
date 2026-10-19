@@ -1,0 +1,58 @@
+import React from "react";
+
+interface LogoProps extends React.SVGProps<SVGSVGElement> {
+  className?: string;
+  primaryColor?: string; // Main letters (default #F6F0EB Warm Ivory)
+  accentColor?: string;  // Burgundy accent (default #71334B or #492332)
+  includeTagline?: boolean;
+}
+
+export function Logo({
+  className = "h-8 w-auto",
+  primaryColor = "#F6F0EB",
+  accentColor = "#71334B",
+  includeTagline = false,
+  ...props
+}: LogoProps) {
+  return (
+    <div className="flex flex-col items-start gap-1">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="268.3 288.6 967.6 443.9"
+        fillRule="evenodd"
+        className={className}
+        aria-label="ZNX Labs Logo"
+        role="img"
+        {...props}
+      >
+        <g id="znx-primary" fill={primaryColor}>
+          {/* N */}
+          <path d="m609.3 310.6 0 219 55.6 52.6 1.7-132.5 162.1 152.5 69.9-67.1 0-108.4-62.1-58.7-1.1 153.3-225.3-211.1c-.1 0-.4.1-.6.4z" />
+          {/* Z */}
+          <path d="m317.2 311.3 61.8 56.75 138.2 0-230.3 230.3 365.9 0-58.6-56.85-163.5 0 164.5-163.9 0-65.95-278 0z" />
+          {/* X main diagonal */}
+          <path d="m828.3 311 297.2 288.95 89.6 0-295.6-289.1-91.2 0z" />
+          {/* A in LABS */}
+          <path d="m655.2 652.1-3.3.2-36.6 53c-5.8 8.5-5.9 8.3 1.3 8.3 7.2 0 4.6 3.1 31.1-36.6l10.2-13.9 33.7 50.25 6 0c7.6-.15 7.5.15 3.1-6.35l-37.6-55z" />
+          {/* L in LABS */}
+          <path d="m414.75 673.9 0 39.1 62.85 0 0-10-51.7 0 0-49.9-11.2-.4z" />
+          {/* B in LABS */}
+          <path d="m840.4 653.5 0 59.95 28.9 0c33.3.25 33.6.15 37.9-4.25 5.6-5.8 5.3-22.1-.4-25.5-2.2-1.3-2.2-1.4.1-2.8 8.1-4.8 4.8-23.9-4.6-27.3zm58 10.8c3.2 2.7 1.9 11.3-2 12.55l-44.7 0 0-13.8 45 0 1.7 1.25zm-.9 24c2.6 1.4 3.7 8 2 12-1.4 3.2-2 3.4-26 3.1l-21.95 0 0-15.05 45.95 0z" />
+          {/* S in LABS */}
+          <path d="m1059.2 653.9c-12.7 4.1-14.5 25.8-2.7 32.2l50.7 1.9 1.4 1.6c1.6 1.8 2.1 8.5.8 11.2-1.4 3.1-1.1 3.1-31.5 3.55l-28.4 0 0 9.55 30.7 0c34 0 33 .2 36.7-3.9 5.4-5.9 5.4-22.6 0-28-4.1-4.2-5.4-4.4-30.8-4.4l-22.1 0-1.6-1.4c-2.4-2-2.5-8.9-.3-11.2l1.5-1.6 26.7 0c31 0 28.7.5 28.5-5.9l-.2-4-59.4 0z" />
+        </g>
+        <g id="znx-accent" fill={accentColor}>
+          {/* Top-right branch of X */}
+          <path d="m1097.9 307.2-8.3.3-73.9 70.3c-3.5 3-3.5 2.9 6.6 12.7l44.3 43.2c7.8 7.7 6.5 7.4 12.4 1.8l136.1-125.5c1.4-1.3 2.4-2.5 2.2-2.7z" />
+          {/* Bottom-left wing of X */}
+          <path d="m969.8 487.9-114 107.8c-6.5 5.7-11.2 5.2 50.3 5l54.2 0 69.3-64.2-54.3-53.3z" />
+        </g>
+      </svg>
+      {includeTagline && (
+        <span className="text-[10px] tracking-[0.25em] font-medium uppercase text-[#B8ADB2] pl-1 font-mono">
+          Building What&apos;s Next
+        </span>
+      )}
+    </div>
+  );
+}

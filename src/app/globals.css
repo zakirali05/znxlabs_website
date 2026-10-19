@@ -1,0 +1,252 @@
+@import "tailwindcss";
+
+:root {
+  /* ZNX Labs Core Brand Colors */
+  --brand-deep-vine: #492332;
+  --brand-near-black: #090708;
+  --brand-dark-surface: #110D0F;
+  --brand-elevated-surface: #191316;
+  --brand-warm-ivory: #F6F0EB;
+  --brand-muted-text: #B8ADB2;
+  --brand-subtle-border: rgba(246, 240, 235, 0.12);
+  --brand-burgundy-highlight: #71334B;
+
+  /* Theme mappings */
+  --background: var(--brand-near-black);
+  --foreground: var(--brand-warm-ivory);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+  --font-display: var(--font-space-grotesk), var(--font-inter), sans-serif;
+  --font-serif: var(--font-instrument), "Instrument Serif", Georgia, serif;
+  --font-lobster: var(--font-lobster), "Lobster", cursive;
+
+  --color-deep-vine: #492332;
+  --color-near-black: #090708;
+  --color-dark-surface: #110D0F;
+  --color-elevated-surface: #191316;
+  --color-warm-ivory: #F6F0EB;
+  --color-muted-text: #B8ADB2;
+  --color-burgundy-highlight: #71334B;
+  --color-subtle-border: rgba(246, 240, 235, 0.12);
+
+  /* Legacy aliases for backward compatibility */
+  --color-brand-black: #090708;
+  --color-brand-dark: #090708;
+  --color-brand-surface: #110D0F;
+  --color-brand-surface-card: #110D0F;
+  --color-brand-surface-elevated: #191316;
+  --color-brand-border: rgba(246, 240, 235, 0.12);
+  --color-brand-border-subtle: rgba(246, 240, 235, 0.08);
+  --color-brand-border-highlight: #71334B;
+  --color-brand-accent: #492332;
+  --color-brand-accent-glow: #71334B;
+  --color-brand-accent-light: #71334B;
+  --color-brand-white: #F6F0EB;
+  --color-brand-offwhite: #F6F0EB;
+  --color-brand-muted: #B8ADB2;
+  --color-brand-subtle: #8a7f85;
+}
+
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--brand-near-black);
+  color: var(--brand-warm-ivory);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: var(--font-display);
+  letter-spacing: -0.025em;
+}
+
+.font-lobster {
+  font-family: var(--font-lobster), "Lobster", cursive !important;
+}
+
+.font-serif {
+  font-family: var(--font-serif) !important;
+}
+
+/* Subtle editorial grid pattern */
+.bg-grid-pattern {
+  background-size: 48px 48px;
+  background-image: 
+    linear-gradient(to right, rgba(246, 240, 235, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(246, 240, 235, 0.025) 1px, transparent 1px);
+}
+
+.bg-dot-pattern {
+  background-image: radial-gradient(rgba(246, 240, 235, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Restrained Deep Vine Glow */
+.glow-vine {
+  box-shadow: 0 0 60px -15px rgba(73, 35, 50, 0.45);
+}
+
+.glow-vine-sm {
+  box-shadow: 0 0 30px -8px rgba(73, 35, 50, 0.35);
+}
+
+/* 21st.dev Hero Animations */
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-slide-in-1 {
+  animation: fadeSlideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+
+.animate-fade-slide-in-2 {
+  animation: fadeSlideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.22s both;
+}
+
+.animate-fade-slide-in-3 {
+  animation: fadeSlideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.36s both;
+}
+
+.animate-fade-slide-in-4 {
+  animation: fadeSlideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
+}
+
+.animate-fade-slide-in-5 {
+  animation: fadeSlideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.65s both;
+}
+
+/* Smooth custom scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090708;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #191316;
+  border-radius: 4px;
+  border: 1px solid rgba(246, 240, 235, 0.08);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #492332;
+}
+
+/* Subtle focus indicators for accessibility */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 2px solid #71334B;
+  outline-offset: 2px;
+}
+
+/* Universal sleek light sweep / shine hover effect on all buttons and action links */
+button:not(.no-shine),
+.btn-shine,
+[role="button"]:not(.no-shine),
+a[class*="rounded-"][class*="px-"]:not(.no-shine),
+a[class*="rounded-"][class*="py-"]:not(.no-shine),
+a[class*="bg-[#492332]"]:not(.no-shine),
+a[class*="bg-[#71334B]"]:not(.no-shine),
+a[class*="bg-[rgba(246,240,235"]:not(.no-shine),
+a[class*="border-[#492332]"]:not(.no-shine),
+a[class*="border-[#71334B]"]:not(.no-shine),
+a[class*="border-[rgba(246,240,235"]:not(.no-shine) {
+  position: relative !important;
+  overflow: hidden !important;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+button:not(.no-shine)::after,
+.btn-shine::after,
+[role="button"]:not(.no-shine)::after,
+a[class*="rounded-"][class*="px-"]:not(.no-shine)::after,
+a[class*="rounded-"][class*="py-"]:not(.no-shine)::after,
+a[class*="bg-[#492332]"]:not(.no-shine)::after,
+a[class*="bg-[#71334B]"]:not(.no-shine)::after,
+a[class*="bg-[rgba(246,240,235"]:not(.no-shine)::after,
+a[class*="border-[#492332]"]:not(.no-shine)::after,
+a[class*="border-[#71334B]"]:not(.no-shine)::after,
+a[class*="border-[rgba(246,240,235"]:not(.no-shine)::after {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(246, 240, 235, 0.26) 50%,
+    transparent 100%
+  ) !important;
+  transform: translateX(-100%) !important;
+  transition: transform 0.65s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  pointer-events: none !important;
+  z-index: 20 !important;
+}
+
+button:not(.no-shine):hover::after,
+.btn-shine:hover::after,
+[role="button"]:not(.no-shine):hover::after,
+a[class*="rounded-"][class*="px-"]:not(.no-shine):hover::after,
+a[class*="rounded-"][class*="py-"]:not(.no-shine):hover::after,
+a[class*="bg-[#492332]"]:not(.no-shine):hover::after,
+a[class*="bg-[#71334B]"]:not(.no-shine):hover::after,
+a[class*="bg-[rgba(246,240,235"]:not(.no-shine):hover::after,
+a[class*="border-[#492332]"]:not(.no-shine):hover::after,
+a[class*="border-[#71334B]"]:not(.no-shine):hover::after,
+a[class*="border-[rgba(246,240,235"]:not(.no-shine):hover::after {
+  transform: translateX(100%) !important;
+}
+
+button:not(.no-shine):hover,
+.btn-shine:hover,
+[role="button"]:not(.no-shine):hover,
+a[class*="rounded-"][class*="px-"]:not(.no-shine):hover,
+a[class*="rounded-"][class*="py-"]:not(.no-shine):hover,
+a[class*="bg-[#492332]"]:not(.no-shine):hover,
+a[class*="bg-[#71334B]"]:not(.no-shine):hover,
+a[class*="bg-[rgba(246,240,235"]:not(.no-shine):hover {
+  transform: translateY(-1px);
+}
+
+button:not(.no-shine):active,
+.btn-shine:active,
+a[class*="rounded-xl"][class*="px-"]:active,
+a[class*="rounded-lg"][class*="px-"]:active,
+a[class*="rounded-full"][class*="px-"]:active,
+a[class*="rounded-2xl"][class*="px-"]:active,
+a[class*="bg-[#492332]"]:active,
+a[class*="bg-[rgba(246,240,235"]:active {
+  transform: translateY(0);
+}
+
+/* Accessibility: Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
