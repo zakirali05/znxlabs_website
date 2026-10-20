@@ -74,9 +74,9 @@ export function AboutSection() {
                     Too many software projects fail because agencies focus on billable hours instead of business outcomes. We take the opposite approach: we look at where your business is losing hours or revenue, and we engineer the cleanest solution to fix it.
                   </p>
 
-                  <p className="mt-3 text-sm text-[#B8ADB2] leading-relaxed">
+                  {/* <p className="mt-3 text-sm text-[#B8ADB2] leading-relaxed">
                     When you work with ZNX Labs, you work directly with experienced software architects and engineers who understand commercial reality.
-                  </p>
+                  </p> */}
 
                   {/* 3 Core Commitments list */}
                   <div className="mt-6 pt-6 space-y-4 border-t border-[rgba(246,240,235,0.06)]">
