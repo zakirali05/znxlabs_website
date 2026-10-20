@@ -95,13 +95,13 @@ export default function HomePage() {
           <CorePillars />
 
           {/* 4. Our Products: Real practical software systems built for clients */}
-          <OurProducts />
+          {/* <OurProducts /> */}
 
-          {/* 5. Some Data: Big bold impact numbers (15k+ hours saved, 85% faster quotes) */}
+          {/* 5. Approach: The ZNX Approach principles for AI solutions & software */}
           <DataImpact />
 
           {/* 6. Why Us: Clear comparison between typical agencies and ZNX Labs */}
-          <WhyUs />
+          {/* <WhyUs /> */}
 
           {/* 7. About Us: Honest company philosophy and commitment to client code ownership */}
           <AboutSection />
