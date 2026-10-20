@@ -1197,6 +1197,198 @@ export const HIRE_ENGINEERS_DATA: ServiceItem[] = [
    ========================================================================= */
 export const INDUSTRIES_DATA: IndustryItem[] = [
   {
+    slug: "finance",
+    name: "Finance & FinTech",
+    tagline: "Secure financial workflows, payment engines, and compliance automation.",
+    heroDescription:
+      "We help fintech founders, investment firms, and financial institutions engineer secure payment rails, automated reconciliation pipelines, audit-ready compliance tracking, and intelligent fraud detection.",
+    challenges: [
+      { title: "Manual Multi-Ledger Reconciliation", description: "Finance teams spending days matching gateway settlements, bank statements, and internal ERP ledgers manually." },
+      { title: "Stringent KYC/AML & Compliance Overhead", description: "Verifying customer identity documents and screening sanction lists while maintaining audit trails is slow and error-prone." },
+      { title: "Legacy Banking & Core System Silos", description: "Difficulty bridging modern digital customer experiences with legacy core banking databases and settlement networks." },
+    ],
+    solutionsProvided: [
+      { title: "Automated Financial Reconciliation Middleware", description: "Real-time ledger balancing engine connecting Stripe, Plaid, Swift, and internal accounting with automated exception routing." },
+      { title: "Frictionless KYC/AML Compliance Pipelines", description: "Automated identity ingestion, biometric verification, sanctions checking, and audit-ready reporting." },
+      { title: "Secure Customer Portals & Lending Platforms", description: "High-security digital banking, loan origination, and portfolio management interfaces with granular RBAC." },
+    ],
+    caseExample: {
+      title: "FinTech Multi-Currency Gateway & Automated Settlement Engine",
+      description: "Architected an automated multi-currency reconciliation platform connecting payment processors and core banking APIs with instant ledger balancing.",
+      impact: "Reduced month-end closing cycle from 6 days to under 4 hours with 99.98% automated reconciliation accuracy.",
+    },
+    faqs: [
+      {
+        question: "How do you guarantee financial security and regulatory compliance?",
+        answer: "We engineer systems adhering to SOC2 Type II, PCI-DSS Level 1, and GDPR compliance standards, utilizing banking-grade AES-256 encryption, hardware security modules (HSM), and immutable audit logs.",
+      },
+      {
+        question: "Can you integrate with core banking APIs and platforms like NetSuite or QuickBooks?",
+        answer: "Yes, we integrate with major core banking providers, payment gateways (Stripe, Adyen), open banking APIs (Plaid), and ERP systems like NetSuite, QuickBooks, and SAP.",
+      },
+    ],
+  },
+  {
+    slug: "education",
+    name: "Education & EdTech",
+    tagline: "Scalable eLearning platforms, cohort learning hubs, and automated grading pipelines.",
+    heroDescription:
+      "We help universities, educational institutions, and edtech founders build high-performance learning platforms, interactive coursework portals, automated assessment engines, and student retention analytics.",
+    challenges: [
+      { title: "Fragmented Learning & Administrative Tools", description: "Using separate disconnected systems for video lectures, assignments, quizzes, and gradebooks causes friction for educators and students." },
+      { title: "Manual Grading Bottlenecks", description: "Educators spend up to 20 hours each week manually evaluating assignments, delaying student feedback loops." },
+      { title: "Low Course Completion & Student Churn", description: "Lack of interactive engagement, peer collaboration, and early-warning retention metrics leads to high dropout rates." },
+    ],
+    solutionsProvided: [
+      { title: "Unified LMS & Interactive Cohort Hubs", description: "Scalable online learning platforms with integrated video streaming, peer discussions, assignment submissions, and progress tracking." },
+      { title: "Intelligent Assessment & Instant Feedback", description: "Rubric-grounded evaluation engines that provide students immediate, formative feedback on coursework and coding exercises." },
+      { title: "Student Retention & Progress Analytics", description: "Predictive dashboards that detect disengaged learners early, alerting instructors to intervene proactively." },
+    ],
+    caseExample: {
+      title: "Interactive EdTech Bootcamp Learning & Evaluation Platform",
+      description: "Engineered a custom web and mobile LMS for 15,000+ students featuring automated code evaluation, live cohort rooms, and instructor progress dashboards.",
+      impact: "Boosted 12-week course completion rates from 28% to 64% while saving instructors 18 hours per week in grading time.",
+    },
+    faqs: [
+      {
+        question: "Does your platform support LTI and SCORM standards?",
+        answer: "Yes, we build educational software compliant with LTI (Learning Tools Interoperability) 1.3, SCORM, and xAPI standards for seamless integration with existing institutional systems.",
+      },
+      {
+        question: "Is student data protected under FERPA and COPPA regulations?",
+        answer: "Yes, our educational architectures implement strict FERPA and COPPA compliance controls, student privacy safeguards, and role-based permissions.",
+      },
+    ],
+  },
+  {
+    slug: "ecommerce",
+    name: "E-Commerce & Retail",
+    tagline: "Scalable software and AI automation to handle higher order volume effortlessly.",
+    heroDescription:
+      "Automate customer service, inventory reconciliation, supplier ordering, and multi-channel fulfillment so your brand can scale without increasing administrative headcount.",
+    challenges: [
+      { title: "Repetitive Customer Inquiries", description: "Support teams overwhelmed with 'Where is my order?' and return requests across email and chat." },
+      { title: "Multi-Storefront Inventory Discrepancies", description: "Overselling products because stock levels on Shopify, Amazon, and warehouse ERP don't sync in real time." },
+      { title: "Manual Supplier Restocking", description: "Calculating reorder quantities manually using spreadsheets leads to stockouts or excess holding costs." },
+    ],
+    solutionsProvided: [
+      { title: "Grounded AI Customer Care Agents", description: "Resolves 60%+ of tier-1 support tickets automatically, querying carrier tracking APIs in real time." },
+      { title: "Omnichannel Inventory Sync Middleware", description: "Keeps inventory quantities accurate across all storefronts within seconds of a sale." },
+      { title: "Automated Restock & Purchase Order Triggers", description: "Calculates inventory burn rates and drafts supplier purchase orders when safety stock is reached." },
+    ],
+    caseExample: {
+      title: "Multi-Brand E-Commerce Inventory & Support Hub",
+      description: "Deployed custom middleware syncing three Shopify stores with a 3PL warehouse and implemented an AI customer service assistant.",
+      impact: "Saved 25 hours per week of manual inventory adjustments and halved first-response support times.",
+    },
+    faqs: [
+      {
+        question: "Does this work with Shopify, WooCommerce, and custom stores?",
+        answer: "Yes, we integrate with Shopify, WooCommerce, BigCommerce, Magento, and custom headless storefronts.",
+      },
+      {
+        question: "Can the AI handle return and refund rules safely?",
+        answer: "Yes, we enforce your exact return policies (e.g. within 30 days, unused condition) and can require staff approval for refunds over specific dollar amounts.",
+      },
+    ],
+  },
+  {
+    slug: "healthcare",
+    name: "Healthcare & HealthTech",
+    tagline: "HIPAA-compliant patient portals, clinical workflows, and EHR data integration.",
+    heroDescription:
+      "We help clinics, digital health startups, and hospital networks design and build secure telemedicine solutions, appointment scheduling systems, automated patient intake, and interoperable EHR/EMR bridges.",
+    challenges: [
+      { title: "Severe Administrative Intake Overhead", description: "Clinic staff bogged down by manual phone scheduling, paper patient intake forms, and insurance eligibility verification." },
+      { title: "Fragmented Patient Data Across EHR Systems", description: "Clinical data trapped in disparate legacy EHR/EMR platforms, creating barriers to care coordination and diagnostic efficiency." },
+      { title: "Strict HIPAA Privacy & Data Breach Risks", description: "Navigating stringent healthcare privacy laws, encrypted PHI handling, and comprehensive audit requirements." },
+    ],
+    solutionsProvided: [
+      { title: "HIPAA-Compliant Telehealth & Patient Hubs", description: "Secure, encrypted video consultation rooms, digital intake forms, automated reminders, and lab result portals." },
+      { title: "FHIR & HL7 EHR Interoperability Bridges", description: "Bidirectional middleware connecting custom patient web apps with Epic, Cerner, AthenaHealth, and proprietary EHR backends." },
+      { title: "Real-Time Insurance Verification & Scheduling", description: "Automated eligibility checking that verifies patient coverage instantly and reduces appointment no-shows." },
+    ],
+    caseExample: {
+      title: "Multi-Clinic Telehealth & Automated Patient Intake System",
+      description: "Engineered a HIPAA-compliant telehealth and scheduling portal connecting 8 regional clinics with Epic and Cerner EHR backends.",
+      impact: "Cut patient intake wait times by 65% and reduced missed appointments by 34% through automated SMS/Email workflows.",
+    },
+    faqs: [
+      {
+        question: "How do you ensure full HIPAA compliance and PHI security?",
+        answer: "We sign Business Associate Agreements (BAAs), implement AES-256 encryption at rest and in transit, maintain role-based access control (RBAC), and generate audit-ready access logs.",
+      },
+      {
+        question: "Can your system integrate with our existing EHR like Epic or Cerner?",
+        answer: "Yes, we leverage FHIR (Fast Healthcare Interoperability Resources) APIs and HL7 standards to build bi-directional data synchronization with any certified EHR system.",
+      },
+    ],
+  },
+  {
+    slug: "real-estate",
+    name: "Real Estate & PropTech",
+    tagline: "Streamline tenant communications, maintenance triage, and lease documentation.",
+    heroDescription:
+      "Software and automation tools built for property managers, commercial brokers, and real estate developers to handle leases, maintenance requests, and listings efficiently.",
+    challenges: [
+      { title: "Chaotic Maintenance Dispatch", description: "Tenants texting, emailing, and calling about urgent repairs with incomplete descriptions of the problem." },
+      { title: "Manual Lease & Document Ingestion", description: "Extracting key dates, rent escalations, and renewal options from hundreds of commercial leases." },
+      { title: "Repetitive Inbound Buyer & Tenant Inquiries", description: "Responding to basic questions about square footage, utilities, and showing availability." },
+    ],
+    solutionsProvided: [
+      { title: "Intelligent Maintenance Triage Portal", description: "Tenants upload photos of issues; AI assesses urgency, drafts contractor dispatches, and updates owners." },
+      { title: "Automated Lease Extraction Engine", description: "Extracts critical dates, payment schedules, and obligations from PDF leases into structured tables." },
+      { title: "24/7 Showing & Inquiry Booking Assistant", description: "Answers property questions and schedules viewing tours on agent calendars automatically." },
+    ],
+    caseExample: {
+      title: "Commercial Property Portfolio Lease Tracker",
+      description: "Built a document extraction system processing 350+ commercial leases to track upcoming renewal milestones and rent escalations.",
+      impact: "Prevented two missed lease renewal deadlines and saved 60+ hours of manual document review.",
+    },
+    faqs: [
+      {
+        question: "Can this integrate with Yardi, AppFolio, or RealPage?",
+        answer: "Yes, we can sync data with property management platforms via available APIs or secure automated export connectors.",
+      },
+      {
+        question: "Can contractors update work order status on mobile?",
+        answer: "Yes, contractors receive a one-click mobile link where they can confirm arrival, upload completion photos, and submit invoices without logging into complex software.",
+      },
+    ],
+  },
+  {
+    slug: "tech-saas",
+    name: "Tech & SaaS Companies",
+    tagline: "Senior engineering capacity, scalable cloud backends, and AI feature acceleration.",
+    heroDescription:
+      "Partner with seasoned software and AI engineers to build net-new features, add intelligent agent workflows, and scale your backend architecture without bloated overhead.",
+    challenges: [
+      { title: "Slow Product Backlog Velocity", description: "Internal engineering teams are bogged down by tech debt and maintenance, delaying key new feature launches." },
+      { title: "AI Feature Hype vs. Reliability", description: "Pressure from customers and investors to add AI capabilities without a clear plan to prevent hallucinations." },
+      { title: "Customer Integration Bottlenecks", description: "Enterprise sales stalled because prospects need custom integrations with their internal systems." },
+    ],
+    solutionsProvided: [
+      { title: "Autonomous Engineering Squads", description: "Senior full-stack developers who integrate into your sprint cycles to deliver features on schedule." },
+      { title: "Production-Grade AI & RAG Features", description: "Bespoke semantic search, automated summaries, and agent features built directly into your application." },
+      { title: "Enterprise Connectors & Webhook Engines", description: "Build scalable API connectors that help your sales team close enterprise deals." },
+    ],
+    caseExample: {
+      title: "B2B Analytics Platform AI Modernization",
+      description: "Integrated an LLM-powered natural language reporting assistant that allows non-technical users to query database metrics via conversational text.",
+      impact: "Increased weekly active user engagement by 40% within 30 days of release.",
+    },
+    faqs: [
+      {
+        question: "Do you write clean tests and documentation?",
+        answer: "Yes, all code submitted by our engineers includes unit and integration tests, strict TypeScript types, and comprehensive architecture documentation.",
+      },
+      {
+        question: "How do we manage code reviews and pull requests?",
+        answer: "Our engineers submit pull requests directly to your GitHub or GitLab repositories, adhering to your established review standards and linting rules.",
+      },
+    ],
+  },
+  {
     slug: "manufacturing",
     name: "Manufacturing & Industrial Operations",
     tagline: "Modern software and AI automation engineered for factory and assembly efficiency.",
@@ -1229,34 +1421,99 @@ export const INDUSTRIES_DATA: IndustryItem[] = [
     ],
   },
   {
-    slug: "ecommerce",
-    name: "E-Commerce & D2C Brands",
-    tagline: "Scalable software and AI automation to handle higher order volume effortlessly.",
+    slug: "government",
+    name: "Government & Public Sector",
+    tagline: "Modern citizen service portals, automated permit intake, and secure public workflows.",
     heroDescription:
-      "Automate customer service, inventory reconciliation, supplier ordering, and multi-channel fulfillment so your brand can scale without increasing administrative headcount.",
+      "We partner with municipal agencies, public organizations, and government contractors to replace outdated paper processes with modern citizen service portals, automated permit approvals, and transparent public reporting.",
     challenges: [
-      { title: "Repetitive Customer Inquiries", description: "Support teams overwhelmed with 'Where is my order?' and return requests across email and chat." },
-      { title: "Multi-Storefront Inventory Discrepancies", description: "Overselling products because stock levels on Shopify, Amazon, and warehouse ERP don't sync in real time." },
-      { title: "Manual Supplier Restocking", description: "Calculating reorder quantities manually using spreadsheets leads to stockouts or excess holding costs." },
+      { title: "Paper-Heavy Permitting & License Delays", description: "Citizens and local businesses waiting weeks for basic permits due to manual routing between municipal departments." },
+      { title: "Accessibility & Compliance Mandates", description: "Legacy government websites failing to meet modern Section 508 and WCAG 2.1 AA accessibility guidelines." },
+      { title: "Siloed Legacy Databases & Public Records", description: "Valuable public sector data trapped in on-premise mainframe databases with no unified inter-departmental visibility." },
     ],
     solutionsProvided: [
-      { title: "Grounded AI Customer Care Agents", description: "Resolves 60%+ of tier-1 support tickets automatically, querying carrier tracking APIs in real time." },
-      { title: "Omnichannel Inventory Sync Middleware", description: "Keeps inventory quantities accurate across all storefronts within seconds of a sale." },
-      { title: "Automated Restock & Purchase Order Triggers", description: "Calculates inventory burn rates and drafts supplier purchase orders when safety stock is reached." },
+      { title: "Digital Citizen Permitting & Licensing Portals", description: "Self-service municipal portals with online fee processing, document validation, and real-time application status tracking." },
+      { title: "Accessible, Multi-Lingual Citizen Interfaces", description: "Fully compliant with WCAG 2.1 AA and Section 508, delivering responsive, mobile-first civic access for all constituents." },
+      { title: "Secure Inter-Departmental Workflow Engines", description: "Digital routing, role-based approval hierarchies, and cryptographic audit trails that eliminate bureaucratic bottlenecks." },
     ],
     caseExample: {
-      title: "Multi-Brand E-Commerce Inventory & Support Hub",
-      description: "Deployed custom middleware syncing three Shopify stores with a 3PL warehouse and implemented an AI customer service assistant.",
-      impact: "Saved 25 hours per week of manual inventory adjustments and halved first-response support times.",
+      title: "Municipal Building Permitting & Inspection Automation Portal",
+      description: "Replaced paper permit applications for a regional city council with a modern web portal featuring GIS mapping, plan reviews, and inspector mobile access.",
+      impact: "Reduced average permit turnaround from 24 days to 4 business days while cutting in-person municipal desk queues by 70%.",
     },
     faqs: [
       {
-        question: "Does this work with Shopify, WooCommerce, and custom stores?",
-        answer: "Yes, we integrate with Shopify, WooCommerce, BigCommerce, Magento, and custom headless storefronts.",
+        question: "Do your public sector solutions comply with WCAG accessibility standards?",
+        answer: "Yes, every public sector web interface is engineered from the ground up to meet or exceed WCAG 2.1 AA and Section 508 accessibility criteria.",
       },
       {
-        question: "Can the AI handle return and refund rules safely?",
-        answer: "Yes, we enforce your exact return policies (e.g. within 30 days, unused condition) and can require staff approval for refunds over specific dollar amounts.",
+        question: "Can these applications be hosted on government-approved cloud providers?",
+        answer: "Yes, we deploy onto AWS GovCloud, Microsoft Azure Government, or secure on-premise government datacenters with strict compliance architectures.",
+      },
+    ],
+  },
+  {
+    slug: "legal",
+    name: "Legal Sector & Law Firms",
+    tagline: "AI contract review, encrypted client onboarding, and matter management automation.",
+    heroDescription:
+      "We help law firms, corporate legal departments, and legaltech founders engineer intelligent contract analysis engines, secure client onboarding hubs, and automated billing workflows that let fee-earners focus on high-value counsel.",
+    challenges: [
+      { title: "Labor-Intensive Contract Review & Redlining", description: "Attorneys spending hours manually proofreading standard agreements, NDAs, and vendor contracts for non-standard terms." },
+      { title: "Client Onboarding & KYC Bottlenecks", description: "Lengthy email exchanges collecting identity documents, engagement letters, and conflicts checks delaying matter initiation." },
+      { title: "Dispersed Precedents & Firm Knowledge", description: "Valuable past briefs, memos, and clauses scattered across unsearchable file folders and outdated document management servers." },
+    ],
+    solutionsProvided: [
+      { title: "AI Contract Analysis & Clause Verification", description: "Private semantic analysis that flags risky terms against your firm's playbooks and drafts standard fallback clauses." },
+      { title: "Encrypted Client Intake & Matter Onboarding Hub", description: "Branded client portal with automated document intake, conflict-check routing, and digital engagement letter execution." },
+      { title: "Private Semantic Knowledge & Precedent Search", description: "Secure, confidential vector search across your firm's historical work product with zero external model training." },
+    ],
+    caseExample: {
+      title: "Commercial Law Firm Contract Review & Precedent Engine",
+      description: "Implemented a private AI contract analysis platform indexing 12 years of firm precedents with automated clause risk scoring.",
+      impact: "Reduced routine contract drafting time by 55% while maintaining 100% data confidentiality and zero external API exposure.",
+    },
+    faqs: [
+      {
+        question: "How do you protect attorney-client privilege and confidentiality?",
+        answer: "All legal AI systems run on dedicated, private infrastructure with strict zero-data-retention policies. Your client data is never stored externally or used to train public models.",
+      },
+      {
+        question: "Can this integrate with legal practice management platforms?",
+        answer: "Yes, we integrate with industry-standard legal software including Clio, NetDocuments, iManage, Thomson Reuters, and custom firm databases.",
+      },
+    ],
+  },
+  // Backward-compatible aliases for legacy routes
+  {
+    slug: "saas-and-technology",
+    name: "SaaS & Technology Companies",
+    tagline: "Engineering muscle and AI integration to accelerate your product roadmap.",
+    heroDescription:
+      "Partner with experienced software and AI engineers to build net-new features, add intelligent agent workflows, and scale your backend architecture.",
+    challenges: [
+      { title: "Slow Product Backlog Velocity", description: "Internal engineering teams are bogged down by tech debt and maintenance, delaying key new feature launches." },
+      { title: "AI Feature Hype vs. Reliability", description: "Pressure from customers and investors to add AI capabilities without a clear plan to prevent hallucinations." },
+      { title: "Customer Integration Bottlenecks", description: "Enterprise sales stalled because prospects need custom integrations with their internal systems." },
+    ],
+    solutionsProvided: [
+      { title: "Autonomous Engineering Squads", description: "Senior full-stack developers who integrate into your sprint cycles to deliver features on schedule." },
+      { title: "Production-Grade AI & RAG Features", description: "Bespoke semantic search, automated summaries, and agent features built directly into your application." },
+      { title: "Enterprise Connectors & Webhook Engines", description: "Build scalable API connectors that help your sales team close enterprise deals." },
+    ],
+    caseExample: {
+      title: "B2B Analytics Platform AI Modernization",
+      description: "Integrated an LLM-powered natural language reporting assistant that allows non-technical users to query database metrics via conversational text.",
+      impact: "Increased weekly active user engagement by 40% within 30 days of release.",
+    },
+    faqs: [
+      {
+        question: "Do you write clean tests and documentation?",
+        answer: "Yes, all code submitted by our engineers includes unit and integration tests, strict TypeScript types, and comprehensive architecture documentation.",
+      },
+      {
+        question: "How do we manage code reviews and pull requests?",
+        answer: "Our engineers submit pull requests directly to your GitHub or GitLab repositories, adhering to your established review standards and linting rules.",
       },
     ],
   },
@@ -1289,70 +1546,6 @@ export const INDUSTRIES_DATA: IndustryItem[] = [
       {
         question: "Can the portal match our firm's existing branding?",
         answer: "Yes, client portals are fully white-labeled with your custom domain, firm logo, typography, and styling.",
-      },
-    ],
-  },
-  {
-    slug: "real-estate",
-    name: "Real Estate & Property Management",
-    tagline: "Streamline tenant communications, maintenance triage, and lease documentation.",
-    heroDescription:
-      "Software and automation tools built for property managers, commercial brokers, and real estate developers to handle leases, maintenance requests, and listings efficiently.",
-    challenges: [
-      { title: "Chaotic Maintenance Dispatch", description: "Tenants texting, emailing, and calling about urgent repairs with incomplete descriptions of the problem." },
-      { title: "Manual Lease & Document Ingestion", description: "Extracting key dates, rent escalations, and renewal options from hundreds of commercial leases." },
-      { title: "Repetitive Inbound Buyer & Tenant Inquiries", description: "Responding to basic questions about square footage, utilities, and showing availability." },
-    ],
-    solutionsProvided: [
-      { title: "Intelligent Maintenance Triage Portal", description: "Tenants upload photos of issues; AI assesses urgency, drafts contractor dispatches, and updates owners." },
-      { title: "Automated Lease Extraction Engine", description: "Extracts critical dates, payment schedules, and obligations from PDF leases into structured tables." },
-      { title: "24/7 Showing & Inquiry Booking Assistant", description: "Answers property questions and schedules viewing tours on agent calendars automatically." },
-    ],
-    caseExample: {
-      title: "Commercial Property Portfolio Lease Tracker",
-      description: "Built a document extraction system processing 350+ commercial leases to track upcoming renewal milestones and rent escalations.",
-      impact: "Prevented two missed lease renewal deadlines and saved 60+ hours of manual document review.",
-    },
-    faqs: [
-      {
-        question: "Can this integrate with Yardi, AppFolio, or RealPage?",
-        answer: "Yes, we can sync data with property management platforms via available APIs or secure automated export connectors.",
-      },
-      {
-        question: "Can contractors update work order status on mobile?",
-        answer: "Yes, contractors receive a one-click mobile link where they can confirm arrival, upload completion photos, and submit invoices without logging into complex software.",
-      },
-    ],
-  },
-  {
-    slug: "saas-and-technology",
-    name: "SaaS & Technology Companies",
-    tagline: "Engineering muscle and AI integration to accelerate your product roadmap.",
-    heroDescription:
-      "Partner with experienced software and AI engineers to build net-new features, add intelligent agent workflows, and scale your backend architecture.",
-    challenges: [
-      { title: "Slow Product Backlog Velocity", description: "Internal engineering teams are bogged down by tech debt and maintenance, delaying key new feature launches." },
-      { title: "AI Feature Hype vs. Reliability", description: "Pressure from customers and investors to add AI capabilities without a clear plan to prevent hallucinations." },
-      { title: "Customer Integration Bottlenecks", description: "Enterprise sales stalled because prospects need custom integrations with their internal systems." },
-    ],
-    solutionsProvided: [
-      { title: "Autonomous Engineering Squads", description: "Senior full-stack developers who integrate into your sprint cycles to deliver features on schedule." },
-      { title: "Production-Grade AI & RAG Features", description: "Bespoke semantic search, automated summaries, and agent features built directly into your application." },
-      { title: "Enterprise Connectors & Webhook Engines", description: "Build scalable API connectors that help your sales team close enterprise deals." },
-    ],
-    caseExample: {
-      title: "B2B Analytics Platform AI Modernization",
-      description: "Integrated an LLM-powered natural language reporting assistant that allows non-technical users to query database metrics via conversational text.",
-      impact: "Increased weekly active user engagement by 40% within 30 days of release.",
-    },
-    faqs: [
-      {
-        question: "Do you write clean tests and documentation?",
-        answer: "Yes, all code submitted by our engineers includes unit and integration tests, strict TypeScript types, and comprehensive architecture documentation.",
-      },
-      {
-        question: "How do we manage code reviews and pull requests?",
-        answer: "Our engineers submit pull requests directly to your GitHub or GitLab repositories, adhering to your established review standards and linting rules.",
       },
     ],
   },

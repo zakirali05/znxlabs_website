@@ -12,21 +12,21 @@ export function TestimonialsSection() {
       author: "Marcus Vance",
       role: "VP of Operations",
       company: "Apex Wholesale & Industrial",
-      result: "+34% Quote Win Rate",
+      result: "",
     },
     {
       quote: "Before ZNX Labs, our technicians logged jobs on paper and billing took 10 days. The portal they engineered connects our field staff directly to accounting. Invoices now go out the same afternoon.",
       author: "Sarah Jenkins",
       role: "Managing Director",
       company: "Horizon Field Services",
-      result: "Same-Day Invoicing",
+      result: "",
     },
     {
       quote: "Finding senior software and AI engineers locally was taking us months. ZNX Labs embedded two senior developers into our team within 48 hours. They shipped our new product features two months ahead of schedule.",
       author: "David Liang",
       role: "Co-Founder & CTO",
       company: "NexaFlow Technology",
-      result: "Shipped 2 Months Early",
+      result: "",
     },
   ];
 
@@ -74,10 +74,10 @@ export function TestimonialsSection() {
                     "{t.quote}"
                   </p>
 
-                  <div className="p-3 rounded-xl bg-[#191316] border border-[#71334B]/50 text-xs font-semibold text-[#F6F0EB] flex items-center gap-2">
+                  {/* <div className="p-3 rounded-xl bg-[#191316] border border-[#71334B]/50 text-xs font-semibold text-[#F6F0EB] flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-[#71334B] shrink-0" />
                     <span>Result: {t.result}</span>
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Author Info */}

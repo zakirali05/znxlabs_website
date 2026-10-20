@@ -50,7 +50,19 @@ export default function IndustriesHubPage() {
         {/* Industries Grid */}
         <section className="mt-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {INDUSTRIES_DATA.map((ind, idx) => (
+            {INDUSTRIES_DATA.filter((ind) =>
+              [
+                "finance",
+                "education",
+                "ecommerce",
+                "healthcare",
+                "real-estate",
+                "tech-saas",
+                "manufacturing",
+                "government",
+                "legal",
+              ].includes(ind.slug)
+            ).map((ind, idx) => (
               <div
                 key={ind.slug}
                 className="group rounded-3xl bg-[#110D0F] border border-[rgba(246,240,235,0.1)] hover:border-[rgba(246,240,235,0.22)] p-8 flex flex-col justify-between hover:bg-[#191316] transition-all duration-300"

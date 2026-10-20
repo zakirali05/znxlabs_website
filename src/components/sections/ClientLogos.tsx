@@ -101,7 +101,7 @@ export function ClientLogos() {
                   <img
                     src={logo.src}
                     alt={logo.name}
-                    className={`${logo.imgClass} transition-opacity duration-300 opacity-90 group-hover:opacity-100`}
+                    className={`${logo.imgClass} transition-opacity duration-300 opacity-90 group-hover:opacity-100 grayscale-100 group-hover:grayscale-0`}
                   />
                 </div>
               ))}
@@ -118,7 +118,7 @@ export function ClientLogos() {
                     <img
                       src={logo.src}
                       alt={logo.name}
-                      className={`${logo.imgClass} transition-opacity duration-300 opacity-90 group-hover:opacity-100`}
+                      className={`${logo.imgClass} transition-opacity duration-300 opacity-90 group-hover:opacity-100 grayscale-100 group-hover:grayscale-0`}
                     />
                   </div>
                 ))}
@@ -136,7 +136,7 @@ export function ClientLogos() {
                     <img
                       src={logo.src}
                       alt={logo.name}
-                      className={`${logo.imgClass} transition-opacity duration-300 opacity-90 group-hover:opacity-100`}
+                      className={`${logo.imgClass} transition-opacity duration-300 opacity-90 group-hover:opacity-100 grayscale-100 group-hover:grayscale-0`}
                     />
                   </div>
                 ))}

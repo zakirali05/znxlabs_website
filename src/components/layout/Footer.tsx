@@ -202,28 +202,48 @@ export function Footer() {
             </h4>
             <ul className="space-y-1.5 text-xs">
               <li>
+                <Link href="/industries/finance" className="hover:text-[#F6F0EB] transition-colors">
+                  Finance & FinTech
+                </Link>
+              </li>
+              <li>
+                <Link href="/industries/education" className="hover:text-[#F6F0EB] transition-colors">
+                  Education & EdTech
+                </Link>
+              </li>
+              <li>
+                <Link href="/industries/ecommerce" className="hover:text-[#F6F0EB] transition-colors">
+                  E-Commerce & Retail
+                </Link>
+              </li>
+              <li>
+                <Link href="/industries/healthcare" className="hover:text-[#F6F0EB] transition-colors">
+                  Healthcare & HealthTech
+                </Link>
+              </li>
+              <li>
+                <Link href="/industries/real-estate" className="hover:text-[#F6F0EB] transition-colors">
+                  Real Estate & PropTech
+                </Link>
+              </li>
+              <li>
+                <Link href="/industries/tech-saas" className="hover:text-[#F6F0EB] transition-colors">
+                  Tech & SaaS
+                </Link>
+              </li>
+              <li>
                 <Link href="/industries/manufacturing" className="hover:text-[#F6F0EB] transition-colors">
                   Manufacturing
                 </Link>
               </li>
               <li>
-                <Link href="/industries/ecommerce" className="hover:text-[#F6F0EB] transition-colors">
-                  E-Commerce & D2C
+                <Link href="/industries/government" className="hover:text-[#F6F0EB] transition-colors">
+                  Government Sector
                 </Link>
               </li>
               <li>
-                <Link href="/industries/professional-services" className="hover:text-[#F6F0EB] transition-colors">
-                  Professional Services
-                </Link>
-              </li>
-              <li>
-                <Link href="/industries/real-estate" className="hover:text-[#F6F0EB] transition-colors">
-                  Real Estate
-                </Link>
-              </li>
-              <li>
-                <Link href="/industries/saas-and-technology" className="hover:text-[#F6F0EB] transition-colors">
-                  SaaS & Technology
+                <Link href="/industries/legal" className="hover:text-[#F6F0EB] transition-colors">
+                  Legal Sector
                 </Link>
               </li>
             </ul>

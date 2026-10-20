@@ -19,7 +19,7 @@ import { motion, AnimatePresence } from "framer-motion";
 interface Milestone {
   step: string;
   name: string;
-  timeline: string;
+  focus: string;
   tagline: string;
   description: string;
   concreteDeliverables: string[];
@@ -30,7 +30,7 @@ const MILESTONES: Milestone[] = [
   {
     step: "01",
     name: "Discovery & Strategy",
-    timeline: "Week 1",
+    focus: "Discovery & Alignment",
     tagline: "Understand your operational bottleneck and determine the best solution.",
     description: "We learn how your team currently works, identify where manual hours drain payroll, and verify whether a simple custom script or a smart automation tool provides the highest return on investment.",
     concreteDeliverables: [
@@ -43,25 +43,25 @@ const MILESTONES: Milestone[] = [
   {
     step: "02",
     name: "Fixed Scope & Plan",
-    timeline: "Week 2",
+    focus: "Architecture & Scope",
     tagline: "Lock in fixed milestones, delivery schedules, and clear pricing.",
     description: "We define the software blueprint, what tools will connect, and agree on a transparent fixed-price milestone contract with zero surprise overages.",
     concreteDeliverables: [
       "Fixed Milestone Roadmap & Budget",
       "Software Design Blueprint",
-      "Guaranteed Delivery Deadlines",
+      "Clear Architectural Specifications",
     ],
     icon: Layers,
   },
   {
     step: "03",
     name: "Build & Test",
-    timeline: "Weeks 3–6",
+    focus: "Iterative Build & Staging",
     tagline: "Build your software in private sandboxes without disrupting live operations.",
     description: "We build your software iteratively, conducting continuous tests with your real business data in an isolated staging environment so your ongoing operations are completely safe.",
     concreteDeliverables: [
       "Working Interactive Previews",
-      "Regular Weekly Demo Updates",
+      "Iterative Progress Demos",
       "Thorough Quality & Edge Case Testing",
     ],
     icon: Cpu,
@@ -69,7 +69,7 @@ const MILESTONES: Milestone[] = [
   {
     step: "04",
     name: "Launch & Support",
-    timeline: "Week 6+",
+    focus: "Deployment & Handover",
     tagline: "Smooth deployment, staff training, and 100% intellectual property transfer.",
     description: "We launch your new software with zero operational downtime, train your key team members, and transfer full ownership of the code, databases, and assets directly to you.",
     concreteDeliverables: [
@@ -107,7 +107,33 @@ export function Approach() {
               </div>
 
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#F6F0EB] leading-[1.12]">
-                Four simple steps from problem to working software.
+                Four simple steps from problem to working{" "}
+                <span className="relative inline-block whitespace-nowrap align-baseline px-1 mx-0.5">
+                  <span className="font-lobster font-normal text-[1.12em] tracking-normal text-[#d6acc1] inline-block select-none not-italic drop-shadow-sm">
+                    software
+                  </span>
+                  <svg
+                    viewBox="0 0 285 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="absolute -bottom-1 sm:-bottom-2 md:-bottom-2.5 left-0 w-full h-[12px] sm:h-[15px] md:h-[18px] text-[#d6acc1] pointer-events-none overflow-visible"
+                    preserveAspectRatio="none"
+                    aria-hidden="true"
+                  >
+                    <motion.path
+                      d="M 5 14 C 70 8, 180 5, 280 7"
+                      stroke="currentColor"
+                      strokeWidth="6"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      initial={{ pathLength: 0, opacity: 0 }}
+                      whileInView={{ pathLength: 1, opacity: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+                    />
+                  </svg>
+                </span>
+                .
               </h2>
 
               <p className="mt-4 text-base sm:text-lg text-[#B8ADB2] font-normal leading-relaxed">
@@ -158,7 +184,7 @@ export function Approach() {
                           Step {m.step}
                         </span>
                         <span className="text-[10px] font-mono text-[#d6acc1]">
-                          {m.timeline}
+                          {m.focus}
                         </span>
                       </div>
 
@@ -197,7 +223,7 @@ export function Approach() {
                   <div className="lg:col-span-7 space-y-4">
                     <div className="flex items-center gap-3">
                       <span className="font-mono text-xs font-bold text-[#d6acc1] bg-[#492332]/40 px-3 py-1 rounded-full border border-[#71334B]/60">
-                        Step {activeMilestone.step} • {activeMilestone.timeline}
+                        Step {activeMilestone.step} • {activeMilestone.focus}
                       </span>
                     </div>
 
@@ -210,25 +236,31 @@ export function Approach() {
                     </p>
                   </div>
 
-                  {/* Right Column: Concrete Deliverables */}
-                  <div className="lg:col-span-5 p-6 rounded-2xl bg-[#090708] border border-[rgba(246,240,235,0.06)] space-y-4">
-                    <span className="text-[10px] font-mono uppercase tracking-wider text-[#d6acc1] font-bold block">
+                  {/* Right Column: Concrete Deliverables (Brand-Colored Refined Card) */}
+                  <div className="lg:col-span-5 p-6 sm:p-7 rounded-2xl bg-gradient-to-br from-[#492332]/35 via-[#24131d]/45 to-[#140e12]/60 border border-[#71334B]/45 shadow-xl shadow-black/40 space-y-4 relative overflow-hidden backdrop-blur-sm">
+                    {/* Subtle brand ambient glow in corner */}
+                    <div 
+                      className="absolute -top-10 -right-10 w-36 h-36 bg-[#71334B]/25 blur-3xl rounded-full pointer-events-none" 
+                      aria-hidden="true" 
+                    />
+
+                    <span className="text-[10px] font-mono uppercase tracking-wider text-[#d6acc1] font-bold block relative z-10">
                       Concrete Deliverables You Receive
                     </span>
 
-                    <ul className="space-y-3 text-xs text-[#F6F0EB]">
+                    <ul className="space-y-3 text-xs text-[#F6F0EB] relative z-10">
                       {activeMilestone.concreteDeliverables.map((del, idx) => (
                         <li key={idx} className="flex items-start gap-2.5">
-                          <CheckCircle2 className="w-4 h-4 text-[#71334B] shrink-0 mt-0.5" />
+                          <CheckCircle2 className="w-4 h-4 text-[#d6acc1] shrink-0 mt-0.5" />
                           <span className="font-medium">{del}</span>
                         </li>
                       ))}
                     </ul>
 
-                    <div className="pt-4 border-t border-[rgba(246,240,235,0.08)] flex items-center justify-between text-xs text-[#B8ADB2]">
+                    {/* <div className="pt-4 border-t border-[rgba(246,240,235,0.08)] flex items-center justify-between text-xs text-[#B8ADB2] relative z-10">
                       <span>Code Ownership:</span>
                       <strong className="text-[#F6F0EB] font-mono">100% Client Ownership</strong>
-                    </div>
+                    </div> */}
                   </div>
 
                 </div>

@@ -76,11 +76,15 @@ const NAV_CATEGORIES: NavCategory[] = [
     href: "/industries",
     icon: Building2,
     items: [
+      { name: "Finance & FinTech", href: "/industries/finance", description: "Automated reconciliation, ledgers, and compliance" },
+      { name: "Education & EdTech", href: "/industries/education", description: "eLearning platforms and automated grading" },
+      { name: "E-Commerce & Retail", href: "/industries/ecommerce", description: "Inventory reconciliation and 24/7 care agents" },
+      { name: "Healthcare & HealthTech", href: "/industries/healthcare", description: "HIPAA patient portals and EHR data bridges" },
+      { name: "Real Estate & PropTech", href: "/industries/real-estate", description: "Maintenance triage and lease data extraction" },
+      { name: "Tech & SaaS", href: "/industries/tech-saas", description: "Engineering capacity and AI product acceleration" },
       { name: "Manufacturing", href: "/industries/manufacturing", description: "Shop-floor tracking and RFQ quotation intake" },
-      { name: "E-Commerce & D2C", href: "/industries/ecommerce", description: "Inventory reconciliation and 24/7 care agents" },
-      { name: "Professional Services", href: "/industries/professional-services", description: "Client onboarding and knowledge research" },
-      { name: "Real Estate", href: "/industries/real-estate", description: "Maintenance triage and lease data extraction" },
-      { name: "SaaS & Technology", href: "/industries/saas-and-technology", description: "Engineering muscle and AI feature acceleration" },
+      { name: "Government Sector", href: "/industries/government", description: "Citizen portals and permit workflow automation" },
+      { name: "Legal Sector", href: "/industries/legal", description: "AI contract review and client intake portals" },
     ],
   },
   {
@@ -202,7 +206,7 @@ export function Navbar() {
                       </Link>
                     </div>
 
-                    <div className="space-y-1">
+                    <div className="space-y-1 max-h-[65vh] overflow-y-auto pr-1 custom-scrollbar">
                       {cat.items.map((item) => (
                         <Link
                           key={item.name}
