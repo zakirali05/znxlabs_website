@@ -216,13 +216,16 @@ export function Approach() {
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
             >
-              <SpotlightCard className="p-8 sm:p-12 border border-[rgba(246,240,235,0.12)] bg-[#110D0F] shadow-2xl">
+              <SpotlightCard 
+                className="p-8 sm:p-12 border border-[#71334B] bg-[#492332] shadow-2xl shadow-[#492332]/35"
+                spotlightColor="rgba(214, 172, 193, 0.25)"
+              >
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                   
                   {/* Left Column: Summary */}
                   <div className="lg:col-span-7 space-y-4">
                     <div className="flex items-center gap-3">
-                      <span className="font-mono text-xs font-bold text-[#d6acc1] bg-[#492332]/40 px-3 py-1 rounded-full border border-[#71334B]/60">
+                      <span className="font-mono text-xs font-bold text-[#F6F0EB] bg-black/25 px-3 py-1 rounded-full border border-white/15">
                         Step {activeMilestone.step} • {activeMilestone.focus}
                       </span>
                     </div>
@@ -231,36 +234,25 @@ export function Approach() {
                       {activeMilestone.tagline}
                     </h3>
 
-                    <p className="text-xs sm:text-sm text-[#B8ADB2] leading-relaxed">
+                    <p className="text-xs sm:text-sm text-[#F6F0EB]/85 leading-relaxed">
                       {activeMilestone.description}
                     </p>
                   </div>
 
-                  {/* Right Column: Concrete Deliverables (Brand-Colored Refined Card) */}
-                  <div className="lg:col-span-5 p-6 sm:p-7 rounded-2xl bg-gradient-to-br from-[#492332]/35 via-[#24131d]/45 to-[#140e12]/60 border border-[#71334B]/45 shadow-xl shadow-black/40 space-y-4 relative overflow-hidden backdrop-blur-sm">
-                    {/* Subtle brand ambient glow in corner */}
-                    <div 
-                      className="absolute -top-10 -right-10 w-36 h-36 bg-[#71334B]/25 blur-3xl rounded-full pointer-events-none" 
-                      aria-hidden="true" 
-                    />
-
-                    <span className="text-[10px] font-mono uppercase tracking-wider text-[#d6acc1] font-bold block relative z-10">
+                  {/* Right Column: Concrete Deliverables */}
+                  <div className="lg:col-span-5 p-6 sm:p-7 rounded-2xl bg-black/25 border border-white/10 shadow-xl space-y-4 backdrop-blur-sm">
+                    <span className="text-[10px] font-mono uppercase tracking-wider text-[#d6acc1] font-bold block">
                       Concrete Deliverables You Receive
                     </span>
 
-                    <ul className="space-y-3 text-xs text-[#F6F0EB] relative z-10">
+                    <ul className="space-y-3 text-xs text-[#F6F0EB]">
                       {activeMilestone.concreteDeliverables.map((del, idx) => (
                         <li key={idx} className="flex items-start gap-2.5">
                           <CheckCircle2 className="w-4 h-4 text-[#d6acc1] shrink-0 mt-0.5" />
-                          <span className="font-medium">{del}</span>
+                          <span className="font-medium text-[#F6F0EB]">{del}</span>
                         </li>
                       ))}
                     </ul>
-
-                    {/* <div className="pt-4 border-t border-[rgba(246,240,235,0.08)] flex items-center justify-between text-xs text-[#B8ADB2] relative z-10">
-                      <span>Code Ownership:</span>
-                      <strong className="text-[#F6F0EB] font-mono">100% Client Ownership</strong>
-                    </div> */}
                   </div>
 
                 </div>

@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Logo } from "@/components/brand/Logo";
 import { ArrowUpRight, Globe2, Mail, ShieldCheck } from "lucide-react";
 import { PrivacyPolicyModal } from "@/components/ui/PrivacyPolicyModal";
@@ -311,6 +312,7 @@ export function Footer() {
           </div>
 
         </div>
+
 
         {/* Bottom Legal Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#B8ADB2]">
