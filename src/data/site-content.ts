@@ -1683,30 +1683,30 @@ export const LOCATIONS_DATA: LocationItem[] = [
     slug: "india",
     country: "India",
     region: "South Asia",
-    headline: "Engineering AI Systems & Custom Software for Growing Indian Businesses",
+    headline: "AI Development Company & Custom Software Engineering in India",
     description:
-      "Partnering with high-growth technology companies, manufacturers, and exporters across India to build custom digital products and automate business workflows.",
+      "Headquartered with deep engineering roots in Ahmedabad, Gujarat, ZNX Labs partners with high-growth enterprises, industrial manufacturers, exporters, and technology companies across India to build custom digital products, autonomous AI agents, and intelligent workflow automation.",
     collaborationModel:
-      "Direct technical pairing with Indian Standard Time (IST) working hours, agile sprint velocity, and cost-efficient engineering delivery.",
+      "Direct technical pairing with Indian Standard Time (IST) working hours, agile sprint velocity, on-site collaboration in Ahmedabad/Gujarat, and transparent delivery.",
     timezonesCovered: "Indian Standard Time (IST, UTC+5:30) with 100% real-time workday collaboration.",
     keyServices: [
-      { title: "Custom Software Platforms", desc: "High-throughput web applications and internal operational tools." },
-      { title: "AI Workflow Automation", desc: "Automate quotation handling, invoice processing, and CRM cadences." },
-      { title: "Dedicated Engineering Teams", desc: "Scale your technical capacity with seasoned full-stack and AI engineers." },
+      { title: "AI Agent & Workflow Automation", desc: "Automate quotation handling, vendor reconciliation, invoice processing, and CRM pipelines." },
+      { title: "Custom Software & ERP Development", desc: "High-throughput web applications, custom CRM/ERP portals, and operational databases." },
+      { title: "Dedicated Engineering Teams", desc: "Scale your technical capacity with seasoned full-stack, RAG, and AI engineers." },
     ],
     marketFocus: [
-      "Export manufacturing & wholesale",
-      "Fast-growing B2B tech companies",
-      "Healthcare & logistics operations",
+      "Industrial manufacturing & export engineering in Gujarat & Ahmedabad",
+      "Fast-growing B2B tech and SaaS enterprises",
+      "Chemicals, pharmaceuticals, textiles & distribution operations",
     ],
     faqs: [
       {
-        question: "How do we get started on an engagement in India?",
-        answer: "We begin with a technical discovery call, review your current workflow, and provide a clear, fixed-milestone roadmap for implementation.",
+        question: "How do we get started on an engagement in India or Gujarat?",
+        answer: "We begin with a technical discovery call, review your current workflow, and provide a clear, fixed-milestone roadmap for implementation, with options for in-person workshops in Ahmedabad.",
       },
       {
         question: "What currencies and payment methods are supported?",
-        answer: "We support direct INR domestic bank transfers (NEFT / RTGS) with standard GST-compliant tax invoices.",
+        answer: "We support direct INR domestic bank transfers (NEFT / RTGS / UPI) with standard GST-compliant tax invoices.",
       },
     ],
   },

@@ -24,7 +24,7 @@ export function Footer() {
             </Link>
 
             <p className="text-sm text-[#F6F0EB] font-medium font-mono">
-              Building What&apos;s Next.
+              Automate Your Business.
             </p>
 
             <p className="text-xs text-[#B8ADB2] leading-relaxed max-w-sm">
@@ -301,6 +301,11 @@ export function Footer() {
               <li>
                 <Link href="/work" className="hover:text-[#F6F0EB] transition-colors">
                   Our Work
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog" className="hover:text-[#F6F0EB] transition-colors">
+                  Blog & Insights
                 </Link>
               </li>
               <li>

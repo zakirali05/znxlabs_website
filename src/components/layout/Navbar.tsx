@@ -95,6 +95,7 @@ const NAV_CATEGORIES: NavCategory[] = [
       { name: "About ZNX Labs", href: "/about", description: "Our engineering philosophy and team foundation" },
       { name: "How We Work", href: "/how-we-work", description: "Our transparent 4-stage delivery process" },
       { name: "Our Work", href: "/work", description: "Working software demonstrations and systems" },
+      { name: "Blog & Guides", href: "/blog", description: "In-depth engineering & AI automation guides" },
       { name: "Contact", href: "/contact", description: "Discuss a project with a technical engineer" },
     ],
   },

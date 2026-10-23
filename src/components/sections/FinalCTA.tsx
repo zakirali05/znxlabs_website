@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { ArrowRight, Clock, Lock, ShieldCheck, CheckCircle2, Loader2, Sparkles, Send } from "lucide-react";
 import { MotionReveal } from "@/components/ui/MotionReveal";
 
@@ -15,7 +16,7 @@ interface FinalCTAProps {
 export function FinalCTA({
   title = "Ready to eliminate your team’s",
   highlightedText = "operational bottlenecks?",
-  subtitle = "Tell us what is slowing your team down or what digital product you need engineered. Our senior team will evaluate technical feasibility and propose a practical milestone roadmap.",
+  subtitle = "Tell us what is slowing your team down or what digital product you need engineered. Our team will evaluate technical feasibility and propose a practical milestone roadmap.",
   defaultService = "Custom Software & Mobile App",
 }: FinalCTAProps = {}) {
   const [formData, setFormData] = useState({
@@ -96,16 +97,60 @@ export function FinalCTA({
               <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-[rgba(246,240,235,0.12)] bg-[rgba(246,240,235,0.03)] backdrop-blur-md">
                 <span className="w-2 h-2 rounded-full bg-[#71334B] animate-pulse" />
                 <span className="text-[11px] font-mono uppercase tracking-[0.2em] text-[#d6acc1]">
-                  Accepting Q2/Q3 Enterprise Sprints
+                  Accepting Projects
                 </span>
               </div>
 
               {/* Headline */}
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#F6F0EB] leading-[1.1]">
                 {title}{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F6F0EB] via-neutral-100 to-[#d6acc1]">
-                  {highlightedText}
-                </span>
+                {(() => {
+                  const match = highlightedText.match(/(bottlenecks?)/i);
+                  if (match) {
+                    const parts = highlightedText.split(new RegExp(`(${match[0]})`, "i"));
+                    return (
+                      <>
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F6F0EB] via-neutral-100 to-[#d6acc1]">
+                          {parts[0]}
+                        </span>
+                        <span className="relative inline-block whitespace-nowrap align-baseline px-1 mx-0.5">
+                          <span className="font-lobster font-normal text-[1.12em] tracking-normal text-[#d6acc1] inline-block select-none not-italic drop-shadow-sm">
+                            {parts[1]}
+                          </span>
+                          <svg
+                            viewBox="0 0 285 20"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="absolute -bottom-1 sm:-bottom-2 md:-bottom-2.5 left-0 w-full h-[12px] sm:h-[15px] md:h-[18px] text-[#d6acc1] pointer-events-none overflow-visible"
+                            preserveAspectRatio="none"
+                            aria-hidden="true"
+                          >
+                            <motion.path
+                              d="M 5 14 C 70 8, 180 5, 280 7"
+                              stroke="currentColor"
+                              strokeWidth="6"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              initial={{ pathLength: 0, opacity: 0 }}
+                              whileInView={{ pathLength: 1, opacity: 1 }}
+                              viewport={{ once: true }}
+                              transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+                            />
+                          </svg>
+                        </span>
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F6F0EB] to-[#d6acc1]">
+                          {parts.slice(2).join("")}
+                        </span>
+                      </>
+                    );
+                  }
+
+                  return (
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F6F0EB] via-neutral-100 to-[#d6acc1]">
+                      {highlightedText}
+                    </span>
+                  );
+                })()}
               </h2>
 
               {/* Supporting Copy */}
@@ -119,7 +164,7 @@ export function FinalCTA({
                   <div className="w-6 h-6 rounded-md bg-[#492332]/40 border border-[#71334B]/40 flex items-center justify-center text-[#d6acc1] shrink-0">
                     <Clock className="w-3.5 h-3.5" />
                   </div>
-                  <span className="text-[#F6F0EB] font-medium">Engineer follow-up within 24 hours guaranteed</span>
+                  <span className="text-[#F6F0EB] font-medium">Engineer follow-up within 24 hours</span>
                 </div>
 
                 <div className="flex items-center gap-3">
@@ -140,9 +185,9 @@ export function FinalCTA({
               {/* Alternative route */}
               <div className="pt-4 text-xs text-[#B8ADB2]">
                 Prefer a direct conversation?{" "}
-                <Link href="/contact" className="text-[#F6F0EB] underline hover:text-[#d6acc1] transition-colors font-semibold">
-                  Schedule a full consultation call →
-                </Link>
+                <a href="https://cal.com/znx-labs-qupdl5/15min" target="_blank" className="text-[#F6F0EB] underline hover:text-[#d6acc1] transition-colors font-semibold">
+                  Schedule a call →
+                </a>
               </div>
             </div>
 

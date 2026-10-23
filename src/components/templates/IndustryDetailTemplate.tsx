@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { FinalCTA } from "@/components/sections/FinalCTA";
+import { BrandHeroBackground } from "@/components/ui/BrandHeroBackground";
 import { IndustryItem } from "@/data/site-content";
 import { ArrowRight, CheckCircle2, ChevronRight, HelpCircle, ShieldCheck } from "lucide-react";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
@@ -34,52 +35,55 @@ export function IndustryDetailTemplate({ industry }: IndustryDetailProps) {
       <div className="relative flex flex-col min-h-screen bg-[#090708] text-[#F6F0EB]">
         <Navbar />
 
-        <main className="flex-1 pt-32 pb-24 lg:pt-40 lg:pb-32">
+        <main className="flex-1 pb-24 lg:pb-32">
           
           {/* Hero & Breadcrumb */}
-          <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 text-xs text-[#B8ADB2]">
-              <Link href="/" className="hover:text-[#F6F0EB] transition-colors">
-                Home
-              </Link>
-              <ChevronRight className="w-3.5 h-3.5 text-neutral-600" />
-              <Link href="/industries" className="hover:text-[#F6F0EB] transition-colors">
-                Industries
-              </Link>
-              <ChevronRight className="w-3.5 h-3.5 text-neutral-600" />
-              <span className="text-[#F6F0EB] font-medium" aria-current="page">
-                {industry.name}
-              </span>
-            </nav>
-
-            <div className="max-w-4xl space-y-6">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[rgba(246,240,235,0.1)] bg-[rgba(246,240,235,0.02)]">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#71334B]" />
-                <span className="text-[11px] font-mono tracking-widest text-[#B8ADB2] uppercase">
-                  Industry Focus
-                </span>
-              </div>
-
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#F6F0EB] leading-[1.1]">
-                {industry.name}
-              </h1>
-
-              <p className="text-lg sm:text-xl text-[#d6acc1] font-medium leading-snug">
-                {industry.tagline}
-              </p>
-
-              <p className="text-base sm:text-lg text-[#B8ADB2] font-normal leading-relaxed max-w-3xl">
-                {industry.heroDescription}
-              </p>
-
-              <div className="pt-2 flex flex-col sm:flex-row items-center gap-4">
-                <Link
-                  href="/contact"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 text-sm font-semibold text-[#F6F0EB] bg-[#492332] hover:bg-[#5f2d40] active:bg-[#381a26] border border-[#71334B]/60 rounded-xl shadow-lg transition-all"
-                >
-                  <span>Discuss an Industry Solution</span>
-                  <ArrowRight className="w-4 h-4" />
+          <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 border-b border-[rgba(246,240,235,0.08)] overflow-hidden">
+            <BrandHeroBackground />
+            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 text-xs text-[#B8ADB2]">
+                <Link href="/" className="hover:text-[#F6F0EB] transition-colors">
+                  Home
                 </Link>
+                <ChevronRight className="w-3.5 h-3.5 text-neutral-600" />
+                <Link href="/industries" className="hover:text-[#F6F0EB] transition-colors">
+                  Industries
+                </Link>
+                <ChevronRight className="w-3.5 h-3.5 text-neutral-600" />
+                <span className="text-[#F6F0EB] font-medium" aria-current="page">
+                  {industry.name}
+                </span>
+              </nav>
+
+              <div className="max-w-4xl space-y-6">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[rgba(246,240,235,0.1)] bg-[rgba(246,240,235,0.02)]">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#71334B]" />
+                  <span className="text-[11px] font-mono tracking-widest text-[#B8ADB2] uppercase">
+                    Industry Focus
+                  </span>
+                </div>
+
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#F6F0EB] leading-[1.1]">
+                  {industry.name}
+                </h1>
+
+                <p className="text-lg sm:text-xl text-[#d6acc1] font-medium leading-snug">
+                  {industry.tagline}
+                </p>
+
+                <p className="text-base sm:text-lg text-[#B8ADB2] font-normal leading-relaxed max-w-3xl">
+                  {industry.heroDescription}
+                </p>
+
+                <div className="pt-2 flex flex-col sm:flex-row items-center gap-4">
+                  <Link
+                    href="/contact"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 text-sm font-semibold text-[#F6F0EB] bg-[#492332] hover:bg-[#5f2d40] active:bg-[#381a26] border border-[#71334B]/60 rounded-xl shadow-lg transition-all"
+                  >
+                    <span>Discuss an Industry Solution</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
               </div>
             </div>
           </section>

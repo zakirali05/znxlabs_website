@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
 import { Star, Quote, CheckCircle2 } from "lucide-react";
 import { SpotlightCard } from "@/components/ui/SpotlightCard";
 import { MotionReveal } from "@/components/ui/MotionReveal";
@@ -8,10 +9,10 @@ import { MotionReveal } from "@/components/ui/MotionReveal";
 export function TestimonialsSection() {
   const testimonials = [
     {
-      quote: "ZNX Labs built an automated quote system that cut our turnaround from 36 hours to 15 minutes. It paid for itself within the first 30 days and helped us win deals before our competitors even responded.",
-      author: "Marcus Vance",
-      role: "VP of Operations",
-      company: "Apex Wholesale & Industrial",
+      quote: "ZNX Labs delivered outstanding results on my Next.js project. Their skills are impressive, and they met all deadlines with ease. Communication was clear and prompt. Highly recommend ZNX Labs for Next.js development!.",
+      author: "Pradip Parmar",
+      role: "Founder & CEO",
+      company: "SmartByteLabs",
       result: "",
     },
     {
@@ -45,11 +46,37 @@ export function TestimonialsSection() {
             </div>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#F6F0EB] leading-[1.12]">
-              What business leaders say about working with ZNX Labs.
+              What business leaders say about working with{" "}
+              <span className="relative inline-block whitespace-nowrap align-baseline px-1 mx-0.5">
+                <span className="font-lobster font-normal text-[1.12em] tracking-normal text-[#d6acc1] inline-block select-none not-italic drop-shadow-sm">
+                  Us
+                </span>
+                <svg
+                  viewBox="0 0 285 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="absolute -bottom-1 sm:-bottom-2 md:-bottom-2.5 left-0 w-full h-[12px] sm:h-[15px] md:h-[18px] text-[#d6acc1] pointer-events-none overflow-visible"
+                  preserveAspectRatio="none"
+                  aria-hidden="true"
+                >
+                  <motion.path
+                    d="M 5 14 C 70 8, 180 5, 280 7"
+                    stroke="currentColor"
+                    strokeWidth="6"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    initial={{ pathLength: 0, opacity: 0 }}
+                    whileInView={{ pathLength: 1, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+                  />
+                </svg>
+              </span>
+              .
             </h2>
 
             <p className="mt-4 text-base sm:text-lg text-[#B8ADB2] font-normal leading-relaxed">
-              We measure our success by the measurable time saved and revenue generated for our clients.
+              We measure our success by the measurable the value delivered for our clients.
             </p>
           </div>
         </MotionReveal>

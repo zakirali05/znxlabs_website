@@ -6,11 +6,15 @@ import { Footer } from "@/components/layout/Footer";
 import { SOFTWARE_DEV_DATA } from "@/data/site-content";
 import { ArrowRight, Code2 } from "lucide-react";
 import { FinalCTA } from "@/components/sections/FinalCTA";
+import { BrandHeroBackground } from "@/components/ui/BrandHeroBackground";
 
 export const metadata: Metadata = {
   title: "Custom Software & Mobile App Development | ZNX Labs",
   description:
     "Purpose-built software designed around your operations. Custom web applications, native iOS & Android mobile apps, SaaS products, MVP development, and CRM/ERP systems.",
+  alternates: {
+    canonical: "https://znxlabs.com/software-development",
+  },
   openGraph: {
     title: "Software Development — ZNX Labs",
     description: "Purpose-built web and mobile software designed around your operations, your customers, and the way your business works.",
@@ -23,27 +27,30 @@ export default function SoftwareDevHubPage() {
     <div className="relative flex flex-col min-h-screen bg-[#090708] text-[#F6F0EB]">
       <Navbar />
 
-      <main className="flex-1 pt-32 pb-24 lg:pt-40 lg:pb-32">
+      <main className="flex-1 pb-24 lg:pb-32">
         {/* Header */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl space-y-6">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[rgba(246,240,235,0.1)] bg-[rgba(246,240,235,0.02)]">
-              <Code2 className="w-3.5 h-3.5 text-[#71334B]" />
-              <span className="text-[11px] font-mono tracking-widest text-[#B8ADB2] uppercase">
-                Software Development Pillar
-              </span>
+        <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 border-b border-[rgba(246,240,235,0.08)] overflow-hidden">
+          <BrandHeroBackground />
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl space-y-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[rgba(246,240,235,0.1)] bg-[rgba(246,240,235,0.02)]">
+                <Code2 className="w-3.5 h-3.5 text-[#71334B]" />
+                <span className="text-[11px] font-mono tracking-widest text-[#B8ADB2] uppercase">
+                  Software Development Pillar
+                </span>
+              </div>
+
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#F6F0EB] leading-[1.08]">
+                Software designed around the way{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F6F0EB] to-[#d6acc1]">
+                  your business works.
+                </span>
+              </h1>
+
+              <p className="text-base sm:text-lg text-[#B8ADB2] leading-relaxed">
+                When commercial off-the-shelf tools don&apos;t fit your business processes, we engineer custom web applications, native iOS &amp; Android mobile apps, SaaS products, operational portals, and CRM/ERP systems built to your exact specifications.
+              </p>
             </div>
-
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#F6F0EB] leading-[1.08]">
-              Software designed around the way{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F6F0EB] to-[#d6acc1]">
-                your business works.
-              </span>
-            </h1>
-
-            <p className="text-base sm:text-lg text-[#B8ADB2] leading-relaxed">
-              When commercial off-the-shelf tools don&apos;t fit your business processes, we engineer custom web applications, native iOS &amp; Android mobile apps, SaaS products, operational portals, and CRM/ERP systems built to your exact specifications.
-            </p>
           </div>
         </section>
 

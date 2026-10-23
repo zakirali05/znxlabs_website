@@ -15,11 +15,14 @@ import { FinalCTA } from "@/components/sections/FinalCTA";
 import { Footer } from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "ZNX Labs — Custom Software & AI Tools That Automate Your Business",
+  title: "ZNX Labs | Custom Software & AI Tools That Automate Your Business",
   description:
     "ZNX Labs builds custom software, AI tools, and smart automation that help growing businesses eliminate manual work, speed up operations, and scale with confidence.",
+  alternates: {
+    canonical: "https://znxlabs.com",
+  },
   openGraph: {
-    title: "ZNX Labs — Building What's Next",
+    title: "ZNX Labs | Automate Your Business",
     description:
       "We build custom software and AI tools that automate your business. 100% code ownership, fixed pricing, and direct engineer access.",
     url: "https://znxlabs.com",
@@ -32,13 +35,13 @@ export default function HomePage() {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     name: "ZNX Labs",
-    alternateName: "ZNX Labs - Automate Your Business",
+    alternateName: "ZNX Labs | Automate Your Business",
     url: "https://znxlabs.com",
     logo: "https://znxlabs.com/brand/logo.svg",
     image: "https://znxlabs.com/brand/poster.jpeg",
     description:
       "ZNX Labs builds custom software, AI tools, and smart automation that help growing companies reduce repetitive work and improve productivity.",
-    slogan: "Building What's Next.",
+    slogan: "Automate Your Business.",
     email: "enquiries@znxlabs.com",
     sameAs: ["https://linkedin.com/company/znxlabs"],
     hasOfferCatalog: {

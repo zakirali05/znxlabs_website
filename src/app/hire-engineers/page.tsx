@@ -6,11 +6,15 @@ import { Footer } from "@/components/layout/Footer";
 import { HIRE_ENGINEERS_DATA } from "@/data/site-content";
 import { ArrowRight, CheckCircle2, Cpu, Users } from "lucide-react";
 import { FinalCTA } from "@/components/sections/FinalCTA";
+import { BrandHeroBackground } from "@/components/ui/BrandHeroBackground";
 
 export const metadata: Metadata = {
   title: "Hire AI & Software Engineers | Senior Technical Talent | ZNX Labs",
   description:
     "Augment your product team with senior AI engineers, AI agent developers, LLM/RAG engineers, full-stack developers, and dedicated engineering squads.",
+  alternates: {
+    canonical: "https://znxlabs.com/hire-engineers",
+  },
   openGraph: {
     title: "Hire Engineers — ZNX Labs",
     description: "Bring experienced AI and software engineering capabilities into your product development process.",
@@ -23,27 +27,30 @@ export default function HireEngineersHubPage() {
     <div className="relative flex flex-col min-h-screen bg-[#090708] text-[#F6F0EB]">
       <Navbar />
 
-      <main className="flex-1 pt-32 pb-24 lg:pt-40 lg:pb-32">
+      <main className="flex-1 pb-24 lg:pb-32">
         {/* Header */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl space-y-6">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[rgba(246,240,235,0.1)] bg-[rgba(246,240,235,0.02)]">
-              <Users className="w-3.5 h-3.5 text-[#71334B]" />
-              <span className="text-[11px] font-mono tracking-widest text-[#B8ADB2] uppercase">
-                Engineering Talent Pillar
-              </span>
+        <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 border-b border-[rgba(246,240,235,0.08)] overflow-hidden">
+          <BrandHeroBackground />
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl space-y-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[rgba(246,240,235,0.1)] bg-[rgba(246,240,235,0.02)]">
+                <Users className="w-3.5 h-3.5 text-[#71334B]" />
+                <span className="text-[11px] font-mono tracking-widest text-[#B8ADB2] uppercase">
+                  Engineering Talent Pillar
+                </span>
+              </div>
+
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#F6F0EB] leading-[1.08]">
+                Experienced AI and software engineers ready to{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F6F0EB] to-[#d6acc1]">
+                  accelerate your builds.
+                </span>
+              </h1>
+
+              <p className="text-base sm:text-lg text-[#B8ADB2] leading-relaxed">
+                Skip the multi-month recruiting cycle. We provide senior, vetted AI engineers, agent developers, RAG retrieval specialists, and full-stack squads who embed directly into your sprint cycles.
+              </p>
             </div>
-
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#F6F0EB] leading-[1.08]">
-              Experienced AI and software engineers ready to{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F6F0EB] to-[#d6acc1]">
-                accelerate your builds.
-              </span>
-            </h1>
-
-            <p className="text-base sm:text-lg text-[#B8ADB2] leading-relaxed">
-              Skip the multi-month recruiting cycle. We provide senior, vetted AI engineers, agent developers, RAG retrieval specialists, and full-stack squads who embed directly into your sprint cycles.
-            </p>
           </div>
         </section>
 

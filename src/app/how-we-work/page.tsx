@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { FinalCTA } from "@/components/sections/FinalCTA";
+import { BrandHeroBackground } from "@/components/ui/BrandHeroBackground";
 import { 
   ArrowRight, 
   CheckCircle2, 
@@ -22,6 +23,9 @@ export const metadata: Metadata = {
   title: "How We Work — Our Engineering Process | ZNX Labs",
   description:
     "Learn how ZNX Labs moves projects from an idea to a working software or AI solution through our 4-stage process: Understand, Plan, Build, Launch and Improve.",
+  alternates: {
+    canonical: "https://znxlabs.com/how-we-work",
+  },
   openGraph: {
     title: "How We Work — ZNX Labs",
     description: "A disciplined, transparent process from business problem to working solution.",
@@ -107,26 +111,29 @@ export default function HowWeWorkPage() {
     <div className="relative flex flex-col min-h-screen bg-[#090708] text-[#F6F0EB]">
       <Navbar />
 
-      <main className="flex-1 pt-32 pb-24 lg:pt-40 lg:pb-32">
+      <main className="flex-1 pb-24 lg:pb-32">
         {/* Header */}
-        <section className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[rgba(246,240,235,0.12)] bg-[rgba(246,240,235,0.03)] backdrop-blur-md mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#71334B]" />
-            <span className="text-[11px] font-mono uppercase tracking-[0.2em] text-[#d6acc1]">
-              Our Process
-            </span>
+        <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 border-b border-[rgba(246,240,235,0.08)] overflow-hidden">
+          <BrandHeroBackground />
+          <div className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[rgba(246,240,235,0.12)] bg-[rgba(246,240,235,0.03)] backdrop-blur-md mb-6">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#71334B]" />
+              <span className="text-[11px] font-mono uppercase tracking-[0.2em] text-[#d6acc1]">
+                Our Process
+              </span>
+            </div>
+
+            <h1 className="max-w-4xl mx-auto text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#F6F0EB] leading-[1.1]">
+              How we turn business challenges into{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F6F0EB] via-neutral-100 to-[#d6acc1]">
+                working solutions.
+              </span>
+            </h1>
+
+            <p className="mt-6 max-w-2xl mx-auto text-base sm:text-lg text-[#B8ADB2] font-normal leading-relaxed">
+              Building software shouldn&apos;t be confusing or disruptive. We use a transparent, four-stage process that ensures you stay in control from the first conversation to launch.
+            </p>
           </div>
-
-          <h1 className="max-w-4xl mx-auto text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#F6F0EB] leading-[1.1]">
-            How we turn business challenges into{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F6F0EB] via-neutral-100 to-[#d6acc1]">
-              working solutions.
-            </span>
-          </h1>
-
-          <p className="mt-6 max-w-2xl mx-auto text-base sm:text-lg text-[#B8ADB2] font-normal leading-relaxed">
-            Building software shouldn&apos;t be confusing or disruptive. We use a transparent, four-stage process that ensures you stay in control from the first conversation to launch.
-          </p>
         </section>
 
         {/* 4 Stages Detailed Section */}

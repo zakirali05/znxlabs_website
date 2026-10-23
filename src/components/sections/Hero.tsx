@@ -8,7 +8,7 @@ export function Hero() {
     <ResponsiveHeroBanner
       badgeLabel="Automate Your Business"
       badgeText="Run Operations On Autopilot"
-      title="We build custom software & AI tools that"
+      title="We build custom AI solutions & softwares that"
       titleHighlight="automate your business."
       description="Stop losing hours to manual spreadsheets, repetitive paperwork, and disconnected software. We build dependable software tailored to your company so your team can focus on growth."
       primaryButtonText="Discuss a Project"

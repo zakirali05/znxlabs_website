@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { FinalCTA } from "@/components/sections/FinalCTA";
+import { BrandHeroBackground } from "@/components/ui/BrandHeroBackground";
 import { INDUSTRIES_DATA } from "@/data/site-content";
 import { ArrowRight, Building2 } from "lucide-react";
 
@@ -11,6 +12,9 @@ export const metadata: Metadata = {
   title: "Industry Software & AI Solutions | ZNX Labs",
   description:
     "Tailored digital engineering and AI solutions for manufacturing, e-commerce, professional services, real estate, and SaaS companies.",
+  alternates: {
+    canonical: "https://znxlabs.com/industries",
+  },
   openGraph: {
     title: "Industries We Support — ZNX Labs",
     description: "Specialized software and AI engineering solutions tailored to complex sector workflows.",
@@ -23,27 +27,30 @@ export default function IndustriesHubPage() {
     <div className="relative flex flex-col min-h-screen bg-[#090708] text-[#F6F0EB]">
       <Navbar />
 
-      <main className="flex-1 pt-32 pb-24 lg:pt-40 lg:pb-32">
+      <main className="flex-1 pb-24 lg:pb-32">
         {/* Header */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl space-y-6">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[rgba(246,240,235,0.1)] bg-[rgba(246,240,235,0.02)]">
-              <Building2 className="w-3.5 h-3.5 text-[#71334B]" />
-              <span className="text-[11px] font-mono tracking-widest text-[#B8ADB2] uppercase">
-                Industries Pillar
-              </span>
+        <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 border-b border-[rgba(246,240,235,0.08)] overflow-hidden">
+          <BrandHeroBackground />
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl space-y-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[rgba(246,240,235,0.1)] bg-[rgba(246,240,235,0.02)]">
+                <Building2 className="w-3.5 h-3.5 text-[#71334B]" />
+                <span className="text-[11px] font-mono tracking-widest text-[#B8ADB2] uppercase">
+                  Industries Pillar
+                </span>
+              </div>
+
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#F6F0EB] leading-[1.08]">
+                Targeted digital engineering for{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F6F0EB] to-[#d6acc1]">
+                  complex sectors.
+                </span>
+              </h1>
+
+              <p className="text-base sm:text-lg text-[#B8ADB2] leading-relaxed">
+                We apply proven software architectures and AI automation to industries where manual paperwork, disparate software systems, and recurring administrative delays impact commercial margins.
+              </p>
             </div>
-
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#F6F0EB] leading-[1.08]">
-              Targeted digital engineering for{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F6F0EB] to-[#d6acc1]">
-                complex sectors.
-              </span>
-            </h1>
-
-            <p className="text-base sm:text-lg text-[#B8ADB2] leading-relaxed">
-              We apply proven software architectures and AI automation to industries where manual paperwork, disparate software systems, and recurring administrative delays impact commercial margins.
-            </p>
           </div>
         </section>
 

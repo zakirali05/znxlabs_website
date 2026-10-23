@@ -32,7 +32,7 @@ const lobster = Lobster({
 });
 
 export const metadata: Metadata = {
-  title: "ZNX Labs — Intelligent AI Workflows & Custom Software Engineering",
+  title: "ZNX Labs | Intelligent AI Workflows & Custom Software Engineering",
   description:
     "We build intelligent systems that help growing B2B businesses capture opportunities, eliminate manual bottlenecks, and scale operations through AI, automation, and custom software.",
   metadataBase: new URL("https://znxlabs.com"),
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "ZNX Labs" }],
   openGraph: {
-    title: "ZNX Labs — Building What's Next.",
+    title: "ZNX Labs — Automate Your Business.",
     description:
       "Intelligent AI workflows, revenue systems, and custom software engineering for growing businesses.",
     url: "https://znxlabs.com",
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ZNX Labs — Building What's Next.",
+    title: "ZNX Labs | Automate Your Business.",
     description:
       "We build intelligent systems that help businesses grow. AI workflows, revenue systems, and connected software.",
     images: ["/brand/poster.jpeg"],

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { FinalCTA } from "@/components/sections/FinalCTA";
+import { BrandHeroBackground } from "@/components/ui/BrandHeroBackground";
 import { ServiceItem } from "@/data/site-content";
 import { 
   ArrowRight, 
@@ -50,60 +51,63 @@ export function ServiceDetailTemplate({ service, categoryLabel, categoryHref }: 
       <div className="relative flex flex-col min-h-screen bg-[#090708] text-[#F6F0EB]">
         <Navbar />
 
-        <main className="flex-1 pt-32 pb-24 lg:pt-40 lg:pb-32">
+        <main className="flex-1 pb-24 lg:pb-32">
           
           {/* Section 1: Hero & Breadcrumb */}
-          <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Breadcrumb Navigation */}
-            <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 text-xs text-[#B8ADB2]">
-              <Link href="/" className="hover:text-[#F6F0EB] transition-colors">
-                Home
-              </Link>
-              <ChevronRight className="w-3.5 h-3.5 text-neutral-600" />
-              <Link href={categoryHref} className="hover:text-[#F6F0EB] transition-colors">
-                {categoryLabel}
-              </Link>
-              <ChevronRight className="w-3.5 h-3.5 text-neutral-600" />
-              <span className="text-[#F6F0EB] font-medium" aria-current="page">
-                {service.title}
-              </span>
-            </nav>
-
-            <div className="max-w-4xl space-y-6">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[rgba(246,240,235,0.1)] bg-[rgba(246,240,235,0.02)]">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#71334B]" />
-                <span className="text-[11px] font-mono tracking-widest text-[#B8ADB2] uppercase">
-                  {categoryLabel}
-                </span>
-              </div>
-
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#F6F0EB] leading-[1.1]">
-                {service.title}
-              </h1>
-
-              <p className="text-lg sm:text-xl text-[#d6acc1] font-medium leading-snug">
-                {service.tagline}
-              </p>
-
-              <p className="text-base sm:text-lg text-[#B8ADB2] font-normal leading-relaxed max-w-3xl">
-                {service.heroDescription}
-              </p>
-
-              <div className="pt-2 flex flex-col sm:flex-row items-center gap-4">
-                <Link
-                  href="/contact"
-                  className="btn-shine w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 text-sm font-semibold text-[#F6F0EB] bg-[#492332] hover:bg-[#5f2d40] active:bg-[#381a26] border border-[#71334B]/60 rounded-xl shadow-lg transition-all"
-                >
-                  <span>Discuss This Solution</span>
-                  <ArrowRight className="w-4 h-4" />
+          <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 border-b border-[rgba(246,240,235,0.08)] overflow-hidden">
+            <BrandHeroBackground />
+            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              {/* Breadcrumb Navigation */}
+              <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 text-xs text-[#B8ADB2]">
+                <Link href="/" className="hover:text-[#F6F0EB] transition-colors">
+                  Home
                 </Link>
+                <ChevronRight className="w-3.5 h-3.5 text-neutral-600" />
+                <Link href={categoryHref} className="hover:text-[#F6F0EB] transition-colors">
+                  {categoryLabel}
+                </Link>
+                <ChevronRight className="w-3.5 h-3.5 text-neutral-600" />
+                <span className="text-[#F6F0EB] font-medium" aria-current="page">
+                  {service.title}
+                </span>
+              </nav>
 
-                <a
-                  href="#how-it-works"
-                  className="btn-shine w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-medium text-[#F6F0EB] hover:text-white bg-[rgba(246,240,235,0.04)] hover:bg-[rgba(246,240,235,0.08)] border border-[rgba(246,240,235,0.1)] rounded-xl transition-all"
-                >
-                  <span>See How It Works</span>
-                </a>
+              <div className="max-w-4xl space-y-6">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[rgba(246,240,235,0.1)] bg-[rgba(246,240,235,0.02)]">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#71334B]" />
+                  <span className="text-[11px] font-mono tracking-widest text-[#B8ADB2] uppercase">
+                    {categoryLabel}
+                  </span>
+                </div>
+
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#F6F0EB] leading-[1.1]">
+                  {service.title}
+                </h1>
+
+                <p className="text-lg sm:text-xl text-[#d6acc1] font-medium leading-snug">
+                  {service.tagline}
+                </p>
+
+                <p className="text-base sm:text-lg text-[#B8ADB2] font-normal leading-relaxed max-w-3xl">
+                  {service.heroDescription}
+                </p>
+
+                <div className="pt-2 flex flex-col sm:flex-row items-center gap-4">
+                  <Link
+                    href="/contact"
+                    className="btn-shine w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 text-sm font-semibold text-[#F6F0EB] bg-[#492332] hover:bg-[#5f2d40] active:bg-[#381a26] border border-[#71334B]/60 rounded-xl shadow-lg transition-all"
+                  >
+                    <span>Discuss This Solution</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+
+                  <a
+                    href="#how-it-works"
+                    className="btn-shine w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-medium text-[#F6F0EB] hover:text-white bg-[rgba(246,240,235,0.04)] hover:bg-[rgba(246,240,235,0.08)] border border-[rgba(246,240,235,0.1)] rounded-xl transition-all"
+                  >
+                    <span>See How It Works</span>
+                  </a>
+                </div>
               </div>
             </div>
           </section>
