@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -84,7 +84,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function BlogPostPage({ params }: BlogPostPageProps) {
+async function BlogPostContent({ params }: BlogPostPageProps) {
   const { slug } = await params;
   const post = getBlogPostBySlug(slug);
 
@@ -751,5 +751,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
       <Footer />
     </div>
+  );
+}
+
+export default function BlogPostPage({ params }: BlogPostPageProps) {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-[#090708]" />}>
+      <BlogPostContent params={params} />
+    </Suspense>
   );
 }

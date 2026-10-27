@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk, Instrument_Serif, Lobster } from "next/font/google";
+import "locomotive-scroll/locomotive-scroll.css";
 import "./globals.css";
 import { CookieConsent } from "@/components/ui/CookieConsent";
 import { TimedLeadModal } from "@/components/ui/TimedLeadModal";
+import { SmoothScrollProvider } from "@/components/providers/SmoothScrollProvider";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -87,12 +89,18 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${inter.variable} ${spaceGrotesk.variable} ${instrumentSerif.variable} ${lobster.variable} scroll-smooth antialiased`}
     >
-      <body className="min-h-screen bg-[#000000] text-[#f4f4f6] font-sans selection:bg-[#492332] selection:text-white flex flex-col">
-        {children}
-        <CookieConsent />
-        <TimedLeadModal />
+      <body 
+        suppressHydrationWarning
+        className="min-h-screen bg-[#000000] text-[#f4f4f6] font-sans selection:bg-[#492332] selection:text-white flex flex-col"
+      >
+        <SmoothScrollProvider>
+          {children}
+          <CookieConsent />
+          <TimedLeadModal />
+        </SmoothScrollProvider>
       </body>
     </html>
   );

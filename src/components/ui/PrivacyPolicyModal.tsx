@@ -18,7 +18,10 @@ export function PrivacyPolicyModal({ isOpen, onClose }: PrivacyPolicyModalProps)
       aria-labelledby="privacy-policy-title"
       className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fadeIn"
     >
-      <div className="relative w-full max-w-2xl max-h-[85vh] overflow-y-auto bg-[#0d0d12] border border-white/10 rounded-2xl p-6 sm:p-8 shadow-2xl text-left">
+      <div 
+        data-lenis-prevent
+        className="relative w-full max-w-2xl max-h-[85vh] overflow-y-auto bg-[#0d0d12] border border-white/10 rounded-2xl p-6 sm:p-8 shadow-2xl text-left"
+      >
         {/* Header */}
         <div className="flex items-center justify-between pb-4 border-b border-white/10">
           <div className="flex items-center gap-2">

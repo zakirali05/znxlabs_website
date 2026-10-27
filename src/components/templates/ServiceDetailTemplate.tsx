@@ -9,14 +9,12 @@ import {
   ArrowRight, 
   CheckCircle2, 
   ChevronRight, 
-  HelpCircle, 
   Layers, 
   Lock, 
   ShieldCheck, 
   Sparkles, 
   Workflow 
 } from "lucide-react";
-import { FaqAccordion } from "@/components/ui/FaqAccordion";
 
 interface ServiceDetailProps {
   service: ServiceItem;
@@ -236,73 +234,84 @@ export function ServiceDetailTemplate({ service, categoryLabel, categoryHref }: 
             </div>
           </section>
 
-          {/* Section 5: Demonstration Project & Engagement Process */}
+          {/* Section 5: Engineering Delivery Framework */}
           <section className="mt-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
               
-              {/* Working Demonstration Box */}
-              <div className="lg:col-span-7 rounded-3xl bg-[#110D0F] border border-[rgba(246,240,235,0.1)] p-8 sm:p-10 space-y-5">
-                <div className="flex items-center gap-3">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full text-[10px] font-mono font-medium bg-white/5 text-[#B8ADB2] border border-white/10">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#71334B]" />
-                    {service.projectExample.isDemo ? "Working Demonstration" : "Verified Case Study"}
+              {/* Engineering Delivery Principles */}
+              <div className="lg:col-span-6 rounded-3xl bg-[#110D0F] border border-[rgba(246,240,235,0.1)] p-8 sm:p-10 space-y-6">
+                <div>
+                  <span className="text-[10px] font-mono uppercase tracking-widest text-[#d6acc1] font-semibold block mb-2">
+                    Engineering Standards
                   </span>
+                  <h3 className="text-xl sm:text-2xl font-bold text-[#F6F0EB] tracking-tight">
+                    How We Engineer & Deliver Systems
+                  </h3>
+                  <p className="mt-3 text-xs sm:text-sm text-[#B8ADB2] leading-relaxed">
+                    We believe software engineering should be transparent, disciplined, and measured by real business outcomes. Every system is built directly for your infrastructure with zero vendor lock-in.
+                  </p>
                 </div>
 
-                <h3 className="text-xl sm:text-2xl font-bold text-[#F6F0EB] tracking-tight">
-                  {service.projectExample.title}
-                </h3>
+                <div className="space-y-4 pt-2">
+                  <div className="p-4 rounded-xl bg-[rgba(246,240,235,0.02)] border border-[rgba(246,240,235,0.06)] flex items-start gap-3">
+                    <Lock className="w-4 h-4 text-[#71334B] shrink-0 mt-0.5" />
+                    <div>
+                      <h4 className="text-sm font-bold text-[#F6F0EB]">100% Client Code & IP Ownership</h4>
+                      <p className="text-xs text-[#B8ADB2] mt-0.5 leading-relaxed">
+                        You retain full intellectual property ownership, repositories, and documentation from day one.
+                      </p>
+                    </div>
+                  </div>
 
-                <p className="text-xs sm:text-sm text-[#F6F0EB] leading-relaxed bg-[rgba(246,240,235,0.02)] p-4 rounded-xl border border-[rgba(246,240,235,0.06)]">
-                  {service.projectExample.description}
-                </p>
+                  <div className="p-4 rounded-xl bg-[rgba(246,240,235,0.02)] border border-[rgba(246,240,235,0.06)] flex items-start gap-3">
+                    <ShieldCheck className="w-4 h-4 text-[#71334B] shrink-0 mt-0.5" />
+                    <div>
+                      <h4 className="text-sm font-bold text-[#F6F0EB]">Sovereign Cloud & VPC Isolation</h4>
+                      <p className="text-xs text-[#B8ADB2] mt-0.5 leading-relaxed">
+                        Deployed securely inside your cloud environment (AWS, GCP, Azure, or local on-prem servers) with zero unauthorized third-party retention.
+                      </p>
+                    </div>
+                  </div>
 
-                <div className="p-4 rounded-xl bg-[#492332]/25 border border-[#71334B]/50">
-                  <span className="text-[10px] font-mono uppercase tracking-wider text-[#d6acc1] block font-semibold mb-1">
-                    Verified Outcome:
-                  </span>
-                  <p className="text-xs sm:text-sm text-[#F6F0EB] font-medium">
-                    {service.projectExample.outcome}
-                  </p>
+                  <div className="p-4 rounded-xl bg-[rgba(246,240,235,0.02)] border border-[rgba(246,240,235,0.06)] flex items-start gap-3">
+                    <Workflow className="w-4 h-4 text-[#71334B] shrink-0 mt-0.5" />
+                    <div>
+                      <h4 className="text-sm font-bold text-[#F6F0EB]">Direct Technical Collaboration</h4>
+                      <p className="text-xs text-[#B8ADB2] mt-0.5 leading-relaxed">
+                        Work directly with senior software and AI engineers who understand business logic, not non-technical project managers.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
 
               {/* Engagement Steps */}
-              <div className="lg:col-span-5 rounded-3xl bg-[#110D0F] border border-[rgba(246,240,235,0.1)] p-8 sm:p-10 space-y-4">
-                <span className="text-[10px] font-mono uppercase tracking-widest text-[#B8ADB2] font-semibold block">
-                  Engagement Roadmap
-                </span>
-                <h3 className="text-lg font-bold text-[#F6F0EB]">
-                  How We Implement This
-                </h3>
+              <div className="lg:col-span-6 rounded-3xl bg-[#191316] border border-[#71334B]/40 p-8 sm:p-10 space-y-6 shadow-xl">
+                <div>
+                  <span className="text-[10px] font-mono uppercase tracking-widest text-[#d6acc1] font-semibold block mb-2">
+                    Implementation Lifecycle
+                  </span>
+                  <h3 className="text-xl sm:text-2xl font-bold text-[#F6F0EB] tracking-tight">
+                    Structured Engagement Roadmap
+                  </h3>
+                  <p className="mt-3 text-xs sm:text-sm text-[#B8ADB2] leading-relaxed">
+                    A predictable, step-by-step path from your initial operational bottleneck to production-ready software.
+                  </p>
+                </div>
 
-                <ul className="space-y-3 pt-2">
+                <ul className="space-y-4 pt-2">
                   {service.engagementProcess.map((step, idx) => (
-                    <li key={idx} className="flex items-start gap-2.5 text-xs text-[#B8ADB2]">
-                      <span className="w-5 h-5 rounded-md bg-[#492332] text-[#F6F0EB] flex items-center justify-center font-mono text-[10px] shrink-0 font-bold">
+                    <li key={idx} className="flex items-start gap-3 p-3.5 rounded-xl bg-[#110D0F] border border-[rgba(246,240,235,0.06)]">
+                      <span className="w-6 h-6 rounded-lg bg-[#492332] text-[#F6F0EB] flex items-center justify-center font-mono text-xs shrink-0 font-bold border border-[#71334B]">
                         {idx + 1}
                       </span>
-                      <span className="leading-snug">{step}</span>
+                      <span className="text-xs sm:text-sm text-[#F6F0EB] leading-relaxed pt-0.5">{step}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
             </div>
-          </section>
-
-          {/* Section 6: FAQs */}
-          <section className="mt-24 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <span className="text-[11px] font-mono tracking-widest text-[#B8ADB2] uppercase">
-                Questions & Answers
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-bold text-[#F6F0EB] mt-2">
-                Frequently asked questions.
-              </h2>
-            </div>
-
-            <FaqAccordion items={service.faqs} />
           </section>
 
           {/* Section 7: Final Conversion CTA */}

@@ -94,7 +94,6 @@ const NAV_CATEGORIES: NavCategory[] = [
     items: [
       { name: "About ZNX Labs", href: "/about", description: "Our engineering philosophy and team foundation" },
       { name: "How We Work", href: "/how-we-work", description: "Our transparent 4-stage delivery process" },
-      { name: "Our Work", href: "/work", description: "Working software demonstrations and systems" },
       { name: "Blog & Guides", href: "/blog", description: "In-depth engineering & AI automation guides" },
       { name: "Contact", href: "/contact", description: "Discuss a project with a technical engineer" },
     ],
@@ -207,7 +206,10 @@ export function Navbar() {
                       </Link>
                     </div>
 
-                    <div className="space-y-1 max-h-[65vh] overflow-y-auto pr-1 custom-scrollbar">
+                    <div 
+                      data-lenis-prevent
+                      className="space-y-1 max-h-[65vh] overflow-y-auto pr-1 custom-scrollbar"
+                    >
                       {cat.items.map((item) => (
                         <Link
                           key={item.name}
@@ -265,7 +267,10 @@ export function Navbar() {
 
       {/* Mobile Drawer with Accordion Categories */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#090708] border-b border-[rgba(246,240,235,0.12)] px-4 pt-3 pb-6 max-h-[85vh] overflow-y-auto space-y-3 shadow-2xl">
+        <div 
+          data-lenis-prevent
+          className="lg:hidden bg-[#090708] border-b border-[rgba(246,240,235,0.12)] px-4 pt-3 pb-6 max-h-[85vh] overflow-y-auto space-y-3 shadow-2xl"
+        >
           <div className="space-y-1">
             {NAV_CATEGORIES.map((cat) => {
               const isExpanded = mobileExpanded === cat.title;

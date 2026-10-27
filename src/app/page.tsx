@@ -4,7 +4,6 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Hero } from "@/components/sections/Hero";
 import { ClientLogos } from "@/components/sections/ClientLogos";
 import { CorePillars } from "@/components/sections/CorePillars";
-import { OurProducts } from "@/components/sections/OurProducts";
 import { DataImpact } from "@/components/sections/DataImpact";
 import { WhyUs } from "@/components/sections/WhyUs";
 import { AboutSection } from "@/components/sections/AboutSection";
@@ -97,10 +96,7 @@ export default function HomePage() {
           {/* 3. Services: 3 clear services (AI Solutions, Custom Software, Dedicated Developers) */}
           <CorePillars />
 
-          {/* 4. Our Products: Real practical software systems built for clients */}
-          {/* <OurProducts /> */}
-
-          {/* 5. Approach: The ZNX Approach principles for AI solutions & software */}
+          {/* 4. Approach: The ZNX Approach principles for AI solutions & software */}
           <DataImpact />
 
           {/* 6. Why Us: Clear comparison between typical agencies and ZNX Labs */}

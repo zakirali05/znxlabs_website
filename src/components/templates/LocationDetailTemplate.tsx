@@ -5,8 +5,7 @@ import { Footer } from "@/components/layout/Footer";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { BrandHeroBackground } from "@/components/ui/BrandHeroBackground";
 import { LocationItem } from "@/data/site-content";
-import { ArrowRight, CheckCircle2, ChevronRight, Clock, Globe2, HelpCircle, ShieldCheck } from "lucide-react";
-import { FaqAccordion } from "@/components/ui/FaqAccordion";
+import { ArrowRight, CheckCircle2, ChevronRight, Clock, Globe2, ShieldCheck } from "lucide-react";
 
 interface LocationDetailProps {
   location: LocationItem;
@@ -157,19 +156,7 @@ export function LocationDetailTemplate({ location }: LocationDetailProps) {
             </div>
           </section>
 
-          {/* Section: FAQs */}
-          <section className="mt-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-10">
-              <span className="text-[11px] font-mono tracking-widest text-[#B8ADB2] uppercase">
-                Location Details
-              </span>
-              <h2 className="text-2xl font-bold text-[#F6F0EB] mt-2">
-                Working with ZNX Labs in {location.country}.
-              </h2>
-            </div>
 
-            <FaqAccordion items={location.faqs} />
-          </section>
 
           {/* Interactive Conversion CTA */}
           <FinalCTA
